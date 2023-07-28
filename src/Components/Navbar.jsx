@@ -1,13 +1,34 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
-import {BiLogIn,BiSearchAlt2} from 'react-icons/Bi'
+import {BiLogIn,BiSearchAlt2,BiMenu} from 'react-icons/Bi'
 import {AiOutlineHeart,AiOutlineQuestionCircle} from 'react-icons/ai'
 import {BsFillCartFill,BsHouseFill} from 'react-icons/bs'
 import {MdDiscount} from 'react-icons/md'
 import {TbDiscount} from 'react-icons/tb'
+import {GrNext} from 'react-icons/gr'
 
 const Navbar = () => {
     const [kategorije, setKategorije] = useState(false);
+    const [isWindowBelow750, setWindowBelow750] = useState(false);
+    const [mobileMenu,setMobileMenu] = useState(false);
+
+    useEffect(() => {
+        const handleResize = () => {
+          setWindowBelow750(window.innerWidth < 750);
+        };
+    
+        // Initial check when the component mounts
+        handleResize();
+    
+        // Add event listener for window resize
+        window.addEventListener('resize', handleResize);
+    
+        // Clean up the event listener on component unmount
+        return () => {
+          window.removeEventListener('resize', handleResize);
+        };
+      }, []);
+      
   return (
     <Nav>
         <TopNav>
@@ -27,7 +48,6 @@ const Navbar = () => {
                         <BsFillCartFill size={22} />
                         <p>0</p>
                     </Cart>
-                        <Discount  />
             </InfoDiv>
         </TopNav>
         <BottomNav>
@@ -70,7 +90,41 @@ const Navbar = () => {
                 <p>POGLEDAJ SVE</p>
             </Kategorije>}
         </RealNav>
-        
+        {isWindowBelow750 &&<MobileNav>
+            <Flex>
+                <div>
+                    <Hamburger size={42} onClick={()=>(setMobileMenu(!mobileMenu))} />
+                    <img src='https://www.knjizare-vulkan.rs/files/images/vulkan/logo.png.webp' />
+                </div>
+                <span>
+                    <Heart>
+                        <AiOutlineHeart size={20} />
+                        <p>0</p>
+                    </Heart>
+                    <CartMobile>
+                        <BsFillCartFill size={22} />
+                        <p>0</p>
+                    </CartMobile>
+                </span>
+            </Flex>
+            <MobileTitle>BESPLATNA DOSTAVA Za porudžbine preko 3000 dinara</MobileTitle>
+            {mobileMenu &&<MobileMenu>
+                <span>
+                    <p>Prijavite se</p>
+                    <p>Registrujte se</p>
+                </span>
+                <span>
+                    <p>KATEGORIJE</p>
+                    <Arrow />
+                </span>
+                <p>AKCIJE</p>
+                <p>NOVA IZDANJA</p>
+                <p>#BOOKTOK</p>
+                <p>HARRY POTTER</p>
+                <p>USKORO</p>
+            </MobileMenu>}
+        </MobileNav>}
+
     </Nav>
   )
 }
@@ -79,6 +133,88 @@ const Nav = styled.div`
     width:100%;
     flex-direction:column;
     `
+const Flex = styled.div`
+    display:flex;
+    justify-content: space-between;
+    padding: 0.5rem 0.5rem;
+    align-items:center;
+    width: 100%;
+`
+const Arrow = styled(GrNext)`
+
+`
+const CartMobile = styled.div`
+    display:flex;
+    margin-left: 1rem;
+    p{
+        margin-left:0.3rem;
+    }
+`
+const MobileTitle = styled.div`
+    width: 100%;
+    font-size: 0.8rem;
+    height: 3vh;
+    background:black;
+    color: white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+`
+
+const MobileMenu = styled.div`
+    position: absolute;
+    top:4rem;
+    left:0rem;
+    width: 250px;
+    height: 93vh;
+    border: 1px solid #cccccc;
+    background: #F2F2F2;
+    position: absolute;
+    transition: 0.1s ease;
+    display:flex;
+    flex-direction: column;
+    justify-content:flex-start;
+    align-items:flex-start;
+    padding-top:2rem;
+    span{
+        display:flex;
+        cursor:pointer;
+        &:hover{
+            transition:0.1s ease;
+        }
+    }
+    p{
+        font-size: 1rem;
+        margin: 1.2rem 1rem;
+        cursor:pointer;
+        &:hover{
+            color:red;
+            transition:0.1s ease;
+        }
+    }
+    
+`
+const MobileNav = styled.div`
+    display: flex;
+    flex-direction:column;
+    align-items:center;
+    img{
+        user-select: none;
+        -moz-user-select: none; /* Firefox */
+        -webkit-user-select: none; /* Safari and Chrome */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+    }
+    span{
+        display:flex;
+        align-items:center;
+        justify-content: center;
+    }
+
+`
+const Hamburger = styled(BiMenu)`
+    cursor: pointer;
+`
 const RealNav = styled.div`
     position: relative;
     width: 100%;
@@ -97,9 +233,18 @@ const RealNav = styled.div`
             color:black;
             transition:0.1s ease;
         }
+        @media (max-width: 1400px) {
+            margin: 0 0.5rem;
+        }
+        @media (max-width: 1400px) {
+            font-size: 0.8rem;
+        }
     }
-    @media (max-width: 1600px) {
-        padding: 0 5rem;
+    @media (max-width: 1700px) {
+        padding: 0 1rem;
+    }
+    @media (max-width: 750px){
+        display:none;
     }
 `
 const Kategorije = styled.div`
@@ -130,9 +275,12 @@ const SearchContainer = styled.div`
 const SearchInput = styled.input`
   padding: 0.5rem;
   background: #F2F2F2;
-  border:1px solid #CCCCCC;
+  border:none;
   color: black;
   width: 300px;
+  @media (max-width: 1400px) {
+    width: 100px;
+}
 `;
 
 const SearchButton = styled.button`
@@ -162,6 +310,9 @@ const TopNav = styled.div`
     }
     @media (max-width: 1600px) {
         padding: 0 5rem;
+    }
+    @media (max-width: 750px){
+        display:none;
     }
 `
 const Prijav = styled.p`
@@ -197,9 +348,6 @@ const NavTitle = styled.p`
         justify-content:center;
         align-items:center;
     }
-    @media (max-width: 550px){
-        display:none;
-    }
     `
     const Heart = styled.div`
     display:flex;
@@ -218,18 +366,22 @@ const NavTitle = styled.p`
     cursor:pointer;
     width: 50px;
     height: 4vh;
+    background: red;
     p{
         margin-left: 0.2rem;
         z-index: 10;
-        font-size: 1.2rem;
+        font-size: 0.8rem;
+        @media (max-width: 750px) {
+            font-size: 1rem;
+        }
     }
     `
     const Discount = styled(MdDiscount)`
         color: red;
         position: absolute;
-        right: 14rem;
-        top: -1.1rem;
-        font-size:5.1rem;
+        right: 14.5rem;
+        top: 0rem;
+        font-size:4rem;
         z-index:0;
         @media (max-width: 1600px) {
             right: 4rem;
