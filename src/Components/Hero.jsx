@@ -101,7 +101,7 @@ const ArrowDiv = styled.div`
   display:flex;
   justify-content:space-between;
   align-items:center;
-  font-size:5rem;
+  font-size:4rem;
   padding: 0 15rem;
   pointer-events: none;
   @media (max-width: 1700px) {
@@ -129,6 +129,7 @@ const Wrapper = styled.div`
 const ArrowLeft = styled(IoIosArrowBack)`
   pointer-events: auto;
   cursor:pointer;
+  color:#5A5A5A;
   &:hover{
     color:red;
     transition:0.3s ease;
@@ -137,6 +138,7 @@ const ArrowLeft = styled(IoIosArrowBack)`
 const ArrowRight = styled(IoIosArrowForward)`
   pointer-events: auto;
   cursor:pointer;
+  color:#5A5A5A;
   &:hover{
     color:red;
     transition:0.3s ease;

@@ -3,10 +3,10 @@ import styled from 'styled-components'
 import { Splide, SplideSlide} from '@splidejs/react-splide'
 import '@splidejs/react-splide/css'
 import {Novo} from './data'
+import {AiOutlineShoppingCart} from 'react-icons/ai'
 
-const Books = () => {
+const Books = ({ title, books }) => {
 
-    const [book, setBook] = useState(Novo)
     const [perPageOption, setPerPageOption] = useState(6);
   
     useEffect(() => {
@@ -37,7 +37,7 @@ const Books = () => {
     <div>
      <Wrapper>
         <TitleDiv>
-            <h1>NOVO I AKTUELNO</h1>
+            <h1>{title}</h1>
             <p>Pogledajte sve</p>
         </TitleDiv>
 
@@ -50,7 +50,7 @@ const Books = () => {
           gap: '5rem',
           isLoop: true, 
         }}>
-          {book.map((img) => {
+          {books.map((img) => {
             return(
               <SplideSlide  key={img.id}>
                 <Card>
@@ -58,6 +58,12 @@ const Books = () => {
                     <Circle>
                         <p>{img.popust}%</p>
                     </Circle>
+                    {img.booktok &&<BookTok>Book{<br />}Tok</BookTok>}
+                    <HoverDiv>
+                      <Btn>DETALJNIJE</Btn>
+                      <Btn>BRZI PREGLED</Btn>
+                      <Dodaj><AiOutlineShoppingCart/></Dodaj>
+                    </HoverDiv>
                 </Card>
                 <NameDiv>
                     <p>{img.name}</p>
@@ -66,7 +72,7 @@ const Books = () => {
                 </NameDiv>
               </SplideSlide>
             )
-          })};
+          })}
         </Splide>
       </Wrapper>
 </div>
@@ -78,7 +84,67 @@ const Wrapper = styled.div`
   @media (max-width: 1700px) {
     padding: 0 1rem;
   }
-  margin-bottom: 3rem;
+  padding-bottom: 3rem;
+`
+const Dodaj = styled.button`
+  color:white;
+  cursor:pointer;
+  width:50px;
+  height:50px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  border:none;
+  font-size: 1.5rem;
+  background:black;
+  border-radius:50%;
+  &:hover{
+    background:red;
+    transition:0.3s ease;
+  }
+`
+const HoverDiv = styled.div`
+  width:100%;
+  height:100%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  flex-direction:column;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity:0;
+  backdrop-filter: blur(2px)
+`
+const Btn = styled.button`
+  width: 110px;
+  border:none;
+  background: black;
+  color:white;
+  padding: 0.5rem 0.5rem;
+  font-size:0.8rem;
+  margin: 0.5rem 0;
+  cursor:pointer;
+  &:hover{
+    background: red;
+    transition:0.3s ease;
+  }
+`
+const BookTok = styled.div`
+  background:#D70040;
+  position:absolute;
+  top:0rem;
+  left:-1rem;
+  color:white;
+  font-size: 0.8rem;
+  font-weight: bold;
+  padding: 0 0.4rem;
+  border-top-left-radius:1rem;
+  border-bottom-right-radius:1rem;
+  border: 2px solid #00FFFF;
+  text-align:center;
+  z-index:50;
 `
 const NameDiv = styled.div`
   p{
@@ -111,6 +177,8 @@ const Circle = styled.div`
    justify-content:center;
    align-items:center;
    color:white;
+   z-index:50;
+
 `
 const TitleDiv = styled.div`
   width: 100%;
@@ -125,6 +193,11 @@ const TitleDiv = styled.div`
   }
   p{
     font-size: 0.9rem;
+    cursor:pointer;
+    &:hover{
+      text-decoration:underline;
+      transition:0.3s ease;
+    }
   }
 `
 const Card = styled.div`
@@ -133,17 +206,19 @@ const Card = styled.div`
   position:relative;
   margin-top: 2rem;
   cursor:pointer;
-  
+  margin-bottom: 1rem;
   &:hover{
-    opacity: 70%;
-    transition: 0.3s ease;
+    & > ${HoverDiv} {
+      opacity: 1;
+      transition:0.3s ease;
+    }
   }
   img{
     border-radius: 0rem;
     position: absolute;
     left:0;
-    width:90%;
-    height: 90%;
+    width:100%;
+    height: 100%;
     object-fit: cover;
   }
 `;
