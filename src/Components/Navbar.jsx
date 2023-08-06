@@ -82,7 +82,7 @@ const Navbar = () => {
                 <SearchButton type="button"><BiSearchAlt2 size={25}/></SearchButton>
             </SearchContainer>
             {kategorije &&<Kategorije onMouseLeave={()=>{setKategorije(false)}}>
-                <p>KJNIGE</p>
+                <p>KNJIGE</p>
                 <p>ZA DECU</p>
                 <p>ENGLISH BOOKS</p>
                 <p>GIFT</p>
@@ -163,6 +163,7 @@ const MobileTitle = styled.div`
 `
 
 const MobileMenu = styled.div`
+    z-index: 100;
     position: absolute;
     top:4rem;
     left:0rem;
@@ -248,6 +249,7 @@ const RealNav = styled.div`
     }
 `
 const Kategorije = styled.div`
+    z-index: 100;
     width: 200px;
     height: 260px;
     border: 1px solid #cccccc;
