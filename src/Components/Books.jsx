@@ -172,7 +172,7 @@ const Circle = styled.div`
    position: absolute;
    right: -1rem;
    top: -1rem;
-   background:red;
+   background:	#FF0000;
    display:flex;
    justify-content:center;
    align-items:center;

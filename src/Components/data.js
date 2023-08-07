@@ -228,6 +228,208 @@ export const Top = [
         booktok: true
     }
 ]
+export const TopEng = [
+    {
+        id:1,
+        name: 'HAPPY PLACE TikTok Hit',
+        price: 2.149,
+        realPrice: 2.530,
+        img: 'https://www.knjizare-vulkan.rs/files/thumbs/files/watermark/files/images/slike_proizvoda/thumbs_w/thumbs_1200/377348_w_1200_1200px.jpg.webp',
+        autor: 'Emily Henry',
+        izdavac: 'PENGUIN',
+        popust: 15,
+        booktok: true
+    },
+    {
+        id:2,
+        name: 'TOO LATE TikTok Hit',
+        price: 1.355,
+        realPrice: 1.595,
+        img: 'https://www.knjizare-vulkan.rs/files/watermark/files/images/slike_proizvoda/thumbs_w/378575_w.jpg',
+        autor: 'Colleen Hoover',
+        izdavac: 'LITTLE BROWN',
+        popust: 15,
+        booktok: true
+    },
+    {
+        id:3,
+        name: 'LOVE THEORETICALLY TikTok Hit',
+        price: 1.444,
+        realPrice: 1.699,
+        img: 'https://www.knjizare-vulkan.rs/files/watermark/files/images/slike_proizvoda/thumbs_w/378171_w.jpg',
+        autor: 'Ali Hazelwood',
+        izdavac: 'LITTLE BROWN',
+        popust: 15,
+        booktok: true
+    },
+    {
+        id:4,
+        name: 'ICEBREAKER TikTok Hit',
+        price: 1.262,
+        realPrice: 1.485,
+        img: 'https://www.knjizare-vulkan.rs/files/watermark/files/images/slike_proizvoda/thumbs_w/374485_w.jpg',
+        autor: 'Hannah Grace',
+        izdavac: 'SIMON&SHUSTER',
+        popust: 15,
+        booktok: true
+    },
+    {
+        id:5,
+        name: 'THE LITTLE BOOK OF BURBERRY',
+        price: 2.057,
+        realPrice: 2.420,
+        img: 'https://target.scene7.com/is/image/Target/GUEST_4783e6f4-5c6f-4fa9-8916-67a7fa7dc3d4?wid=488&hei=488&fmt=pjpeg',
+        autor: 'Darla-Jane Gilroy',
+        izdavac: 'CARLTON BOOKS',
+        popust: 15,
+        booktok: false
+    },
+    {
+        id:6,
+        name: 'TIME SHELTER',
+        price: 1.444,
+        realPrice: 1.699,
+        img: 'https://upload.wikimedia.org/wikipedia/en/6/68/Time_Shelter_cover.jpg',
+        autor: 'Georgi Gospodinov',
+        izdavac: 'ORION',
+        popust: 15,
+        booktok: false
+    },
+    {
+        id:7,
+        name: 'THE PSYCHOLOGY BOOK',
+        price: 2.795,
+        realPrice: 3.289,
+        img: 'https://m.media-amazon.com/images/I/81LDP+GDKVL._AC_UF1000,1000_QL80_.jpg',
+        autor: 'DK',
+        izdavac: 'DK',
+        popust: 15,
+        booktok: false
+    },
+    {
+        id:8,
+        name: 'GOTHIKANA',
+        price: 1.355,
+        realPrice: 1.595,
+        img: 'https://www.knjizare-vulkan.rs/files/watermark/files/images/slike_proizvoda/thumbs_w/375333_w.jpg',
+        autor: 'RuNyx',
+        izdavac: 'SIMON&SHUSTER',
+        popust: 15,
+        booktok: false
+    },
+    {
+        id:9,
+        name: 'VIOLET BENT BACKWARDS OVER THE GRASS',
+        price: 2.431,
+        realPrice: 2.860,
+        img: 'https://m.media-amazon.com/images/I/71xG3fBt3-L._AC_UF1000,1000_QL80_.jpg',
+        autor: 'Lana Del Rey',
+        izdavac: 'SIMON&SHUSTER',
+        popust: 15,
+        booktok: false
+    }
+]
+export const Stephen = [
+    {
+        id:1,
+        name: 'CUJO',
+        price: 1.215,
+        realPrice: 1.430,
+        img: 'https://www.knjizare-vulkan.rs/files/images/slike_proizvoda/280311.jpg',
+        autor: 'Stephen King',
+        izdavac: 'HODDER',
+        popust: 15,
+        booktok: false
+    },
+    {
+        id:2,
+        name: 'IT',
+        price: 1.542,
+        realPrice: 1.815,
+        img: 'https://www.dymocks.com.au/Pages/ImageHandler.ashx?q=9781444707861&w=&h=570',
+        autor: 'Stephen King',
+        izdavac: 'HODDER',
+        popust: 15,
+        booktok: false
+    },
+    {
+        id:3,
+        name: 'THE SHINING',
+        price: 1.309,
+        realPrice: 1.540,
+        img: 'https://cdn.waterstones.com/bookjackets/large/9781/4447/9781444720723.jpg',
+        autor: 'Stephen King',
+        izdavac: 'HODDER',
+        popust: 15,
+        booktok: false
+    },
+    {
+        id:4,
+        name: 'THE OUTSIDER',
+        price: 1.215,
+        realPrice: 1.430,
+        img: 'https://www.knjizare-vulkan.rs/files/watermark/files/images/slike_proizvoda/thumbs_w/344421_w.jpg',
+        autor: 'Stephen King',
+        izdavac: 'HODDER',
+        popust: 15,
+        booktok: false
+    },
+    {
+        id:5,
+        name: 'FIRESTARTER',
+        price: 1.262,
+        realPrice: 1.485,
+        img: 'https://www.hachette.com.au/content/books/9781444708103.jpg',
+        autor: 'Stephen King',
+        izdavac: 'HODDER',
+        popust: 15,
+        booktok: false
+    },
+    {
+        id:6,
+        name: 'DREAMCATCHER',
+        price: 1.309,
+        realPrice: 1.540,
+        img: 'https://m.media-amazon.com/images/I/6128c1U2VvL.jpg',
+        autor: 'Stephen King',
+        izdavac: 'HODDER',
+        popust: 15,
+        booktok: false
+    },
+    {
+        id:7,
+        name: 'THINNER',
+        price: 1.309,
+        realPrice: 1.540,
+        img: 'https://www.knjizare-vulkan.rs/files/watermark/files/images/slike_proizvoda/thumbs_w/255069_w.jpg',
+        autor: 'Stephen King',
+        izdavac: 'HODDER',
+        popust: 15,
+        booktok: false
+    },
+    {
+        id:8,
+        name: 'BILLY SUMMERS',
+        price: 1.215,
+        realPrice: 1.429,
+        img: 'https://www.knjizare-vulkan.rs/files/images/slike_proizvoda/367396.jpg',
+        autor: 'Stephen King',
+        izdavac: 'HODDER',
+        popust: 15,
+        booktok: false
+    },
+    {
+        id:9,
+        name: 'THE STAND',
+        price: 1.402,
+        realPrice: 1.649,
+        img: 'https://www.knjizare-vulkan.rs/files/images/slike_proizvoda/353182.jpg',
+        autor: 'Stephen King',
+        izdavac: 'HODDER',
+        popust: 15,
+        booktok: false
+    }
+]
 export const Hoover = [
     {
         id:1,
@@ -237,5 +439,57 @@ export const Hoover = [
         id:2,
         img:'https://i.ibb.co/2dWmQY7/Untitled-design-18.png',
     }
+]
+export const Manga = [
+    {
+        id:1,
+        img:'https://i.ibb.co/PCvdTKZ/MANGA.png'
+    },
+    {
+        id:2,
+        img:'https://i.ibb.co/MDpbbm7/Untitled-design-19.png',
+    }
+]
+export const bankImages = [
+    {
+        id:1,
+        img: 'https://www.knjizare-vulkan.rs/files/images/card/maestro50.gif'
+    },
+    {
+        id:2,
+        img: 'https://www.knjizare-vulkan.rs/files/images/card/amex.jpg.webp'
+    },
+    {
+        id:3,
+        img: 'https://www.knjizare-vulkan.rs/files/images/card/Visa50.gif'
+    },
+    {
+        id:4,
+        img: 'https://www.knjizare-vulkan.rs/files/images/card/dinacard50.png.webp'
+    },
+    {
+        id:5,
+        img: 'https://www.knjizare-vulkan.rs/files/images/card/wsPay.png.webp'
+    },
+    {
+        id:6,
+        img: 'https://www.nirapress.com/wp-content/uploads/2022/10/LOGO-BANCA-INTESA.png'
+    },
+    {
+        id:7,
+        img: 'https://www.knjizare-vulkan.rs/files/images/card/verifiedbyvisa.png.webp'
+    },
+    {
+        id:8,
+        img: 'https://www.knjizare-vulkan.rs/files/images/card/masterCardSC.png.webp'
+    },
+    {
+        id:9,
+        img: 'https://www.knjizare-vulkan.rs/files/images/card/ips_logo.jpg.webp'
+    },
+    {
+        id:10,
+        img: 'https://www.knjizare-vulkan.rs/files/images/card/raiffeisen_logo.png.webp'
+    },
 ]
 export default images

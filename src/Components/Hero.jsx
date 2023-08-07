@@ -124,6 +124,9 @@ const Wrapper = styled.div`
   @media (max-width: 1700px) {
     padding: 0 1rem;
   }
+  @media (max-width: 700px) {
+    padding: 0 0rem;
+  }
 `
 
 const ArrowLeft = styled(IoIosArrowBack)`

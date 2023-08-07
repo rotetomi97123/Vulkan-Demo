@@ -165,7 +165,7 @@ const MobileTitle = styled.div`
 const MobileMenu = styled.div`
     z-index: 100;
     position: absolute;
-    top:4rem;
+    top:6.3rem;
     left:0rem;
     width: 250px;
     height: 93vh;
@@ -256,7 +256,7 @@ const Kategorije = styled.div`
     background: #F2F2F2;
     position: absolute;
     top: 2.2rem;;
-    transition: 0.1s ease;
+    transition: 0.4s ease;
     display:flex;
     flex-direction: column;
     justify-content:center;

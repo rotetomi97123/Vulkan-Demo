@@ -2,8 +2,8 @@ import React, { useEffect, useState } from 'react'
 import { Hoover } from './data'
 import styled from 'styled-components'
 
-const Colleen = () => {
-    const [image, setImage] = useState(Hoover)
+const Colleen = ({ img  }) => {
+    const [image, setImage] = useState(img)
     const [count,setCount] = useState(0)
 
     useEffect(() => {
@@ -43,8 +43,14 @@ const Wrapper = styled.div`
     justify-content:center;
     align-items:center;
     padding: 0 15rem;
+    margin-bottom:3rem;
     @media (max-width: 1700px) {
         padding: 0 1rem;
+    }
+    @media (max-width: 550px){
+      img{
+        width: 400px;
+      }
     }
 `
 export default Colleen
