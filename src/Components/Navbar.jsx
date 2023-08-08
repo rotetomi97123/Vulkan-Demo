@@ -14,7 +14,6 @@ const Navbar = () => {
     const [isWindowBelow750, setWindowBelow750] = useState(false);
     const [mobileMenu,setMobileMenu] = useState(false);
 
-    const dispatch = useDispatch();
     useEffect(() => {
         const handleResize = () => {
           setWindowBelow750(window.innerWidth < 750);

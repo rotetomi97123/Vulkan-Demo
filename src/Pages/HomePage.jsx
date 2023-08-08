@@ -35,7 +35,6 @@ const HomePage = () => {
   )
 }
 const Wrapper = styled.div`
-  position:absolute;
 `
 
 
