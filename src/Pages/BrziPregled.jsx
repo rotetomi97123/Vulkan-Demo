@@ -31,7 +31,7 @@ const BrziPregled = ({ book, onClose }) => {
                 </MarginDiv>
                     <Line />
                     <h3>{book.realPrice}RSD</h3>
-                    <Cena>Cena na sajtu: ${book.price} RSD</Cena>
+                    <Cena>Cena na sajtu: {book.price} RSD</Cena>
                     <p>Ušteda: {((book.realPrice - book.price) > 0 ? (book.realPrice - book.price).toFixed(2) : 0)} RSD</p>
                 <Btn onClick={onClose}>X</Btn>
                 <Flex>

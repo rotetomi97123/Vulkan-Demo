@@ -40,7 +40,7 @@ const Detaljnije = () => {
                     </MarginDiv>
                         <Line />
                         <h3>{book.img.realPrice}RSD</h3>
-                        <Cena>Cena na sajtu: ${book.img.price} RSD</Cena>
+                        <Cena>Cena na sajtu: {book.img.price} RSD</Cena>
                         <p>Ušteda: {((book.img.realPrice - book.img.price) > 0 ? (book.img.realPrice - book.img.price).toFixed(2) : 0)} RSD</p>
                     <Flex>
                         <PriceDiv>
