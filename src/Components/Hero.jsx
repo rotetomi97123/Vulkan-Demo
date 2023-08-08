@@ -159,7 +159,13 @@ const Card = styled.div`
     height: 100%;
     object-fit: cover;
   }
-  
+  @media (max-width: 1200px){
+    overflow:visible;
+    img{
+      width: 100%;
+      height: auto;
+    }
+  }
 `;
 
 export default Hero
