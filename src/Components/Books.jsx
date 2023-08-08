@@ -2,13 +2,25 @@ import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
 import { Splide, SplideSlide} from '@splidejs/react-splide'
 import '@splidejs/react-splide/css'
-import {Novo} from './data'
+import BrziPregled from '../Pages/BrziPregled'
 import {AiOutlineShoppingCart} from 'react-icons/ai'
+import { Link } from 'react-router-dom'
 
 const Books = ({ title, books }) => {
 
     const [perPageOption, setPerPageOption] = useState(6);
   
+    const [selectedBook, setSelectedBook] = useState(null);
+
+  
+    const openModal = (book) => {
+      setSelectedBook(book);
+    };
+  
+    const closeModal = () => {
+      setSelectedBook(null);
+    };
+
     useEffect(() => {
         const handleResize = () => {
           const windowWidth = window.innerWidth;
@@ -60,8 +72,8 @@ const Books = ({ title, books }) => {
                     </Circle>
                     {img.booktok &&<BookTok>Book{<br />}Tok</BookTok>}
                     <HoverDiv>
-                      <Btn>DETALJNIJE</Btn>
-                      <Btn>BRZI PREGLED</Btn>
+                      <Link to="/asd" state={{ book: {img} }}><Btn>DETALJNIJE</Btn></Link>
+                      <Btn  onClick={() => openModal(img)}>BRZI PREGLED</Btn>
                       <Dodaj><AiOutlineShoppingCart/></Dodaj>
                     </HoverDiv>
                 </Card>
@@ -74,6 +86,9 @@ const Books = ({ title, books }) => {
             )
           })}
         </Splide>
+          {selectedBook && (
+          <BrziPregled book={selectedBook} onClose={closeModal} />
+        )}
       </Wrapper>
 </div>
   )

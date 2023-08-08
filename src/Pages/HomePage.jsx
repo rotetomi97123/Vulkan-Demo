@@ -5,7 +5,9 @@ import Books from '../Components/Books'
 import Colleen from '../Components/Colleen'
 import Newsletter from '../Components/Newsletter'
 import Footer from '../Components/Footer'
+import BrziPregled from './BrziPregled'
 import {Novo,Top,TopEng,Hoover,Manga,Stephen} from '../Components/data'
+import styled from 'styled-components'
 
 const HomePage = () => {
   const [book, setBook] = useState(Novo)
@@ -18,7 +20,7 @@ const HomePage = () => {
   
 
   return (
-    <div>
+    <Wrapper>
         <Navbar />
         <Hero />
         <Books title='NOVO I AKTUELNO' books={book}/>
@@ -29,9 +31,12 @@ const HomePage = () => {
         <Books title='STEPHEN KING BOOKS' books={King}/>
         <Newsletter />
         <Footer />
-    </div>
+    </Wrapper>
   )
 }
+const Wrapper = styled.div`
+  position:absolute;
+`
 
 
 export default HomePage

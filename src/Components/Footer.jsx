@@ -171,8 +171,6 @@ const Box = styled.div`
         &:hover{
             transition: 0.3s ease;
         }
-        @media (max-width: 750px) {
-          }
     }
     @media (max-width: 750px) {
         width:100%;
@@ -198,6 +196,12 @@ const Box2 = styled.div`
     display:flex;
     font-size: 2rem;
     justify-content:center;
+    @media (max-width: 750px) {
+        width:100%;
+        justify-content:center;
+        align-items:center;
+        margin-bottom: 1rem;
+      }
 `
 const BottomDiv = styled.div`
     width:100%;
@@ -210,6 +214,12 @@ const BottomDiv = styled.div`
     span{
         font-weight: bold;
     }
+    @media (max-width: 750px) {
+        p{
+            font-size:0.8rem;
+        }
+        margin-bottom:1rem;
+      }
 `
 const FaceBook = styled(GrFacebookOption)`
     margin-right: 1rem;
@@ -259,6 +269,11 @@ const ArrowDiv = styled.div`
     &:hover{
         background:black;
         transition:0.3s ease;
+    }
+    @media (max-width: 500px) {
+        right: 2rem;
+        width: 30px;
+        height: 30px;
     }
 `
 export default Footer

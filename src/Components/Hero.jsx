@@ -153,12 +153,19 @@ const Card = styled.div`
   overflow:hidden;
   position:relative;
   img{
-    border-radius: 0rem;
     position: absolute;
     left:0;
     width:100%;
     height: 100%;
     object-fit: cover;
+  }
+  @media (max-width: 1200px){
+    overflow:visible;
+    img{
+      width: 100%;
+      height:auto;
+
+    }
   }
 `;
 

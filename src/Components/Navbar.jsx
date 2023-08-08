@@ -6,12 +6,15 @@ import {BsFillCartFill,BsHouseFill} from 'react-icons/bs'
 import {MdDiscount} from 'react-icons/md'
 import {TbDiscount} from 'react-icons/tb'
 import {GrNext} from 'react-icons/gr'
+import { Link } from 'react-router-dom'
+import { useSelector, useDispatch } from 'react-redux'
 
 const Navbar = () => {
     const [kategorije, setKategorije] = useState(false);
     const [isWindowBelow750, setWindowBelow750] = useState(false);
     const [mobileMenu,setMobileMenu] = useState(false);
 
+    const dispatch = useDispatch();
     useEffect(() => {
         const handleResize = () => {
           setWindowBelow750(window.innerWidth < 750);
@@ -46,13 +49,13 @@ const Navbar = () => {
                     </Heart>
                     <Cart>
                         <BsFillCartFill size={22} />
-                        <p>0</p>
+                        <p></p>
                     </Cart>
             </InfoDiv>
         </TopNav>
         <BottomNav>
             <BoxImg>
-                <img src='https://www.knjizare-vulkan.rs/files/images/vulkan/logo.png.webp' />
+               <Link to='/'> <img src='https://www.knjizare-vulkan.rs/files/images/vulkan/logo.png.webp' alt='img' /></Link> 
             </BoxImg>
             <Box>
                 <TbDiscount size={42}/>
@@ -139,10 +142,16 @@ const Flex = styled.div`
     padding: 0.5rem 0.5rem;
     align-items:center;
     width: 100%;
+    @media (max-width: 500px){
+        img{
+            width:150px;
+        }
+    }
 `
 const Arrow = styled(GrNext)`
 
 `
+
 const CartMobile = styled.div`
     display:flex;
     margin-left: 1rem;
@@ -193,6 +202,9 @@ const MobileMenu = styled.div`
             color:red;
             transition:0.1s ease;
         }
+    }
+    @media (max-width: 500px){
+        top:5.5rem;
     }
     
 `
@@ -406,8 +418,9 @@ const NavTitle = styled.p`
         }
     `
     const BoxImg = styled.div`
-        width:33%;
-    `
+    width: 33%;
+   
+`;
     const Box = styled.div`
         width: 33%;
         display:flex;

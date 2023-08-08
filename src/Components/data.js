@@ -36,7 +36,8 @@ export const Novo = [
         autor: 'Ernan Dijaz',
         izdavac: 'STELA KNJIGE',
         popust: 10,
-        booktok: false
+        booktok: false,
+        type: 'ROMAN'
     },
     {
         id:2,
@@ -47,7 +48,8 @@ export const Novo = [
         autor: 'Dastin Tao',
         izdavac: 'VULKAN IZDAVAŠTVO',
         popust: 15,
-        booktok: true
+        booktok: true,
+        type: 'LJUBAVNI ROMAN'
     },
     {
         id:3,
@@ -58,7 +60,8 @@ export const Novo = [
         autor: 'Penelopi Daglas',
         izdavac: 'STELA KNJIGE',
         popust: 10,
-        booktok: false
+        booktok: false,
+        type: 'LJUBAVNI ROMAN'
     },
     {
         id:4,
@@ -69,7 +72,8 @@ export const Novo = [
         autor: 'Jens Liljestrand',
         izdavac: 'VULKAN IZDAVAŠTVO',
         popust: 15,
-        booktok: false
+        booktok: false,
+        type: 'ROMAN'
     },
     {
         id:5,
@@ -80,7 +84,8 @@ export const Novo = [
         autor: 'Vinčenco Latroniko',
         izdavac: 'BOOKA',
         popust: 10,
-        booktok: false
+        booktok: false,
+        type: 'ROMAN'
     },
     {
         id:6,
@@ -91,7 +96,8 @@ export const Novo = [
         autor: 'Džulijan Barns',
         izdavac: 'GEOPOETIKA',
         popust: 5,
-        booktok: false
+        booktok: false,
+        type: 'ROMAN'
     },
     {
         id:7,
@@ -102,10 +108,11 @@ export const Novo = [
         autor: 'Miki Bramer',
         izdavac: 'VULKAN IZDAVAŠTVO',
         popust: 15,
-        booktok: false
+        booktok: false,
+        type: 'LJUBAVNI ROMAN'
     },
     {
-        id:7,
+        id:8,
         name: 'KANON POTIŠTENOG UMA',
         price: 764,
         realPrice: 899,
@@ -113,10 +120,11 @@ export const Novo = [
         autor: 'Filip Grbić',
         izdavac: 'VULKAN IZDAVAŠTVO',
         popust: 15,
-        booktok: false
+        booktok: false,
+        type: 'DOMAĆI ROMAN'
     },
     {
-        id:8,
+        id:9,
         name: 'PSOVANJE PUBLIKE',
         price: 1.799,
         realPrice: 1.999,
@@ -124,7 +132,8 @@ export const Novo = [
         autor: 'Peter Handke',
         izdavac: 'LAGUNA',
         popust: 10,
-        booktok: false
+        booktok: false,
+        type: 'ROMAN'
     }
 ]
 export const Top = [
@@ -137,7 +146,8 @@ export const Top = [
         autor: 'Gijom Muso',
         izdavac: 'VULKAN IZDAVAŠTVO',
         popust: 15,
-        booktok: false
+        booktok: false,
+        type: 'TRILERI/MISTERIJE'
     },
     {
         id:2,
@@ -148,7 +158,8 @@ export const Top = [
         autor: 'Tošikazu Kavaguči',
         izdavac: 'VULKAN IZDAVAŠTVO',
         popust: 15,
-        booktok: true
+        booktok: true,
+        type: 'ROMAN'
     },
     {
         id:3,
@@ -159,7 +170,8 @@ export const Top = [
         autor: 'Džejms Klir',
         izdavac: 'FINESA',
         popust: 10,
-        booktok: false
+        booktok: false,
+        type: 'SAVETI ZA KARIJERU I POSTIZANJE USPEHA'
     },
     {
         id:4,
@@ -170,7 +182,8 @@ export const Top = [
         autor: 'Vesna Dedić',
         izdavac: 'DEDIĆ',
         popust: 10,
-        booktok: false
+        booktok: false,
+        type: 'DOMAĆI LJUBAVNI ROMAN'
     },
     {
         id:5,
@@ -181,7 +194,8 @@ export const Top = [
         autor: 'Mirjana Bobić Mojsilović',
         izdavac: 'LAGUNA',
         popust: 10,
-        booktok: false
+        booktok: false,
+        type: 'DOMAĆI LJUBAVNI ROMAN'
     },
     {
         id:6,
@@ -192,7 +206,8 @@ export const Top = [
         autor: 'Feđa Štukan',
         izdavac: 'ČIGOJA ŠTAMPA',
         popust: 10,
-        booktok: false
+        booktok: false,
+        type: 'DOMAĆI ROMAN'
     },
     {
         id:7,
@@ -203,7 +218,8 @@ export const Top = [
         autor: 'Robert Grin',
         izdavac: 'KONTRAST',
         popust: 10,
-        booktok: false
+        booktok: false,
+        type: 'SAVETI ZA KARIJERU I POSTIZANJE USPEHA'
     },
     {
         id:8,
@@ -214,7 +230,8 @@ export const Top = [
         autor: 'Nora Roberts',
         izdavac: 'VULKAN IZDAVAŠTVO',
         popust: 15,
-        booktok: false
+        booktok: false,
+        type: 'LJUBAVNI ROMAN'
     },
     {
         id:9,
@@ -225,7 +242,8 @@ export const Top = [
         autor: 'Mersedes Ron',
         izdavac: 'VULKAN IZDAVAŠTVO',
         popust: 15,
-        booktok: true
+        booktok: true,
+        type: 'LJUBAVNI ROMAN'
     }
 ]
 export const TopEng = [
@@ -238,7 +256,8 @@ export const TopEng = [
         autor: 'Emily Henry',
         izdavac: 'PENGUIN',
         popust: 15,
-        booktok: true
+        booktok: true,
+        type: 'CONTEMPORARY FICTION'
     },
     {
         id:2,
@@ -249,7 +268,8 @@ export const TopEng = [
         autor: 'Colleen Hoover',
         izdavac: 'LITTLE BROWN',
         popust: 15,
-        booktok: true
+        booktok: true,
+        type: 'CRIME, THRILLERS & MYSTERY'
     },
     {
         id:3,
@@ -260,7 +280,8 @@ export const TopEng = [
         autor: 'Ali Hazelwood',
         izdavac: 'LITTLE BROWN',
         popust: 15,
-        booktok: true
+        booktok: true,
+        type: 'CONTEMPORARY FICTION'
     },
     {
         id:4,
@@ -271,7 +292,8 @@ export const TopEng = [
         autor: 'Hannah Grace',
         izdavac: 'SIMON&SHUSTER',
         popust: 15,
-        booktok: true
+        booktok: true,
+        type: 'YOUNG ADULT LITERATURE & FICTION'
     },
     {
         id:5,
@@ -282,7 +304,8 @@ export const TopEng = [
         autor: 'Darla-Jane Gilroy',
         izdavac: 'CARLTON BOOKS',
         popust: 15,
-        booktok: false
+        booktok: false,
+        type: 'FASHION'
     },
     {
         id:6,
@@ -293,7 +316,8 @@ export const TopEng = [
         autor: 'Georgi Gospodinov',
         izdavac: 'ORION',
         popust: 15,
-        booktok: false
+        booktok: false,
+        type: 'CONTEMPORARY FICTION'
     },
     {
         id:7,
@@ -304,7 +328,8 @@ export const TopEng = [
         autor: 'DK',
         izdavac: 'DK',
         popust: 15,
-        booktok: false
+        booktok: false,
+        type: 'PSIHOLOGY'
     },
     {
         id:8,
@@ -315,7 +340,8 @@ export const TopEng = [
         autor: 'RuNyx',
         izdavac: 'SIMON&SHUSTER',
         popust: 15,
-        booktok: false
+        booktok: false,
+        type: 'FANTASY'
     },
     {
         id:9,
@@ -326,7 +352,8 @@ export const TopEng = [
         autor: 'Lana Del Rey',
         izdavac: 'SIMON&SHUSTER',
         popust: 15,
-        booktok: false
+        booktok: false,
+        type: 'POETRY'
     }
 ]
 export const Stephen = [
@@ -339,7 +366,8 @@ export const Stephen = [
         autor: 'Stephen King',
         izdavac: 'HODDER',
         popust: 15,
-        booktok: false
+        booktok: false,
+        type: 'CRIME, THRILLERS & MYSTERY'
     },
     {
         id:2,
@@ -350,7 +378,8 @@ export const Stephen = [
         autor: 'Stephen King',
         izdavac: 'HODDER',
         popust: 15,
-        booktok: false
+        booktok: false,
+        type: 'CRIME, THRILLERS & MYSTERY'
     },
     {
         id:3,
@@ -361,7 +390,8 @@ export const Stephen = [
         autor: 'Stephen King',
         izdavac: 'HODDER',
         popust: 15,
-        booktok: false
+        booktok: false,
+        type: 'CRIME, THRILLERS & MYSTERY'
     },
     {
         id:4,
@@ -372,7 +402,8 @@ export const Stephen = [
         autor: 'Stephen King',
         izdavac: 'HODDER',
         popust: 15,
-        booktok: false
+        booktok: false,
+        type: 'CRIME, THRILLERS & MYSTERY'
     },
     {
         id:5,
@@ -383,7 +414,8 @@ export const Stephen = [
         autor: 'Stephen King',
         izdavac: 'HODDER',
         popust: 15,
-        booktok: false
+        booktok: false,
+        type: 'CRIME, THRILLERS & MYSTERY'
     },
     {
         id:6,
@@ -394,7 +426,8 @@ export const Stephen = [
         autor: 'Stephen King',
         izdavac: 'HODDER',
         popust: 15,
-        booktok: false
+        booktok: false,
+        type: 'CRIME, THRILLERS & MYSTERY'
     },
     {
         id:7,
@@ -405,7 +438,8 @@ export const Stephen = [
         autor: 'Stephen King',
         izdavac: 'HODDER',
         popust: 15,
-        booktok: false
+        booktok: false,
+        type: 'CRIME, THRILLERS & MYSTERY'
     },
     {
         id:8,
@@ -416,7 +450,8 @@ export const Stephen = [
         autor: 'Stephen King',
         izdavac: 'HODDER',
         popust: 15,
-        booktok: false
+        booktok: false,
+        type: 'CRIME, THRILLERS & MYSTERY'
     },
     {
         id:9,
@@ -427,7 +462,8 @@ export const Stephen = [
         autor: 'Stephen King',
         izdavac: 'HODDER',
         popust: 15,
-        booktok: false
+        booktok: false,
+        type: 'CRIME, THRILLERS & MYSTERY'
     }
 ]
 export const Hoover = [

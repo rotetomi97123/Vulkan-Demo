@@ -49,7 +49,7 @@ const Wrapper = styled.div`
     }
     @media (max-width: 550px){
       img{
-        width: 400px;
+        width: 100%;
       }
     }
 `
