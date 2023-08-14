@@ -32,7 +32,7 @@ const BrziPregled = ({ book, onClose }) => {
                     <Line />
                     <h3>{book.realPrice}RSD</h3>
                     <Cena>Cena na sajtu: {book.price} RSD</Cena>
-                    <p>Ušteda: {((book.realPrice - book.price) > 0 ? (book.realPrice - book.price).toFixed(2) : 0)} RSD</p>
+                    <p>Ušteda: {((book.realPrice - book.price))} RSD</p>
                 <Btn onClick={onClose}>X</Btn>
                 <Flex>
                     <PriceDiv>
@@ -112,7 +112,7 @@ const Button = styled.button`
     font-size: 1.5rem;
     cursor:pointer;
     margin: 0 0.5rem;
-   
+    background: none;
 `
 const County = styled.div`
     border:none;
@@ -131,7 +131,7 @@ const MarginDiv = styled.div`
 `
 const Box = styled.div`
     position:relative;
-    width: 48%;
+    width: 55%;
     height:60%;
     background: white;
     display:flex;
