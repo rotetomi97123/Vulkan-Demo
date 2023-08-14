@@ -5,10 +5,10 @@ import './index.css'
 import { BrowserRouter } from 'react-router-dom'
 import { Provider } from 'react-redux'
 import { createStore } from 'redux'
-import cartReducer from './Reducers/cart.js'
+import allReducers from './Reducers/index.js'
 
 const store = createStore(
-  cartReducer,
+  allReducers,
   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 )
 

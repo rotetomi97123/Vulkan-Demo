@@ -5,12 +5,15 @@ import '@splidejs/react-splide/css'
 import BrziPregled from '../Pages/BrziPregled'
 import {AiOutlineShoppingCart} from 'react-icons/ai'
 import { Link } from 'react-router-dom'
+import { useDispatch } from 'react-redux'
+import { addItemToCart } from '../Actions'
 
 const Books = ({ title, books }) => {
 
     const [perPageOption, setPerPageOption] = useState(6);
   
     const [selectedBook, setSelectedBook] = useState(null);
+    const dispatch = useDispatch();
 
   
     const openModal = (book) => {
@@ -62,25 +65,25 @@ const Books = ({ title, books }) => {
           gap: '5rem',
           isLoop: true, 
         }}>
-          {books.map((img) => {
+          {books.map((book) => {
             return(
-              <SplideSlide  key={img.id}>
+              <SplideSlide  key={book.id}>
                 <Card>
-                    <img src={img.img} alt='kep' />
+                    <img src={book.img} alt='kep' />
                     <Circle>
-                        <p>{img.popust}%</p>
+                        <p>{book.popust}%</p>
                     </Circle>
-                    {img.booktok &&<BookTok>Book{<br />}Tok</BookTok>}
+                    {book.booktok &&<BookTok>Book{<br />}Tok</BookTok>}
                     <HoverDiv>
-                      <Link to="/asd" state={{ book: {img} }}><Btn>DETALJNIJE</Btn></Link>
-                      <Btn  onClick={() => openModal(img)}>BRZI PREGLED</Btn>
-                      <Dodaj><AiOutlineShoppingCart/></Dodaj>
+                      <Link to="/Detaljnije" state={{ book: {book} }}><Btn>DETALJNIJE</Btn></Link>
+                      <Btn  onClick={() => openModal(book)}>BRZI PREGLED</Btn>
+                      <Dodaj onClick={() => dispatch((addItemToCart(book)))} ><AiOutlineShoppingCart/></Dodaj>
                     </HoverDiv>
                 </Card>
                 <NameDiv>
-                    <p>{img.name}</p>
-                    <h2>{img.price} RSD</h2>
-                    <h3>{img.realPrice}RSD</h3>
+                    <p>{book.name}</p>
+                    <h2>{book.price} RSD</h2>
+                    <h3>{book.realPrice}RSD</h3>
                 </NameDiv>
               </SplideSlide>
             )

@@ -9,7 +9,6 @@ import { useLocation } from 'react-router-dom';
 const Detaljnije = () => {
   const location = useLocation();
   const { book } = location.state;
-  console.log(location.state); // Check what's being passed
 
   return (
     <div>
@@ -18,30 +17,30 @@ const Detaljnije = () => {
 
             <Box>
                 <ImgDiv>
-                    <img src={book.img.img} alt={book.name} />
+                    <img src={book.book.img} alt={book.name} />
                     <Circle>
-                            <p>{book.img.popust}%</p>
+                            <p>{book.book.popust}%</p>
                     </Circle>
-                    {book.img.booktok &&<BookTok>Book{<br />}Tok</BookTok>}
+                    {book.book.booktok &&<BookTok>Book{<br />}Tok</BookTok>}
                 </ImgDiv>
                 <ContentDiv>
-                    <h2>{book.img.name}</h2>
+                    <h2>{book.book.name}</h2>
                     <MarginDiv>
-                        <h4>{book.img.type}</h4>
+                        <h4>{book.book.type}</h4>
                         <h4>Šifra artikla: 335206</h4>
                         <h4>Isbn: 9781405391245</h4>
                     </MarginDiv>
                     <MarginDiv>
-                        <p>AUTOR: <span>{book.img.autor}</span></p>
-                        <p>IZDAVAC: <span>{book.img.izdavac}</span></p>
+                        <p>AUTOR: <span>{book.book.autor}</span></p>
+                        <p>IZDAVAC: <span>{book.book.izdavac}</span></p>
                     </MarginDiv>
                     <MarginDiv>
                         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis eum nam suscipit sint nulla, quis, aliquam dicta a temporibus minus ex! Neque magni animi a molestiae sint consectetur ratione repellat.
                     </MarginDiv>
                         <Line />
-                        <h3>{book.img.realPrice}RSD</h3>
-                        <Cena>Cena na sajtu: {book.img.price} RSD</Cena>
-                        <p>Ušteda: {((book.img.realPrice - book.img.price))} RSD</p>
+                        <h3>{book.book.realPrice}RSD</h3>
+                        <Cena>Cena na sajtu: {book.book.price} RSD</Cena>
+                        <p>Ušteda: {((book.book.realPrice - book.book.price))} RSD</p>
                     <Flex>
                         <PriceDiv>
                             <Button>-</Button>
@@ -111,12 +110,14 @@ const PriceDiv = styled.div`
     justify-content:center;
     align-items:center;
     font-size: 1.2rem;
+    background: none;
 `
 const Button = styled.button`
     border:none;
     font-size: 1.5rem;
     cursor:pointer;
     margin: 0 0.5rem;
+    background: none;
    
 `
 const County = styled.div`
@@ -189,7 +190,7 @@ const Circle = styled.div`
    height:50px;
    border-radius: 50%;
    position: absolute;
-   right: 10rem;
+   left: 22rem;
    top: 0.5rem;
    background:	#FF0000;
    display:flex;
@@ -214,14 +215,5 @@ const BookTok = styled.div`
   text-align:center;
   z-index:50;
 `
-const Btn = styled.button`
-    position:absolute;
-    top:1rem;
-    right:2rem;
-    background:none;
-    border:none;
-    font-size:1.2rem;
-    font-weight: 600;
-    cursor:pointer;
-`
+
 export default Detaljnije

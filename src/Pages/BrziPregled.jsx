@@ -1,12 +1,16 @@
 import React from 'react'
 import styled from 'styled-components'
 import {BsFillCartFill} from 'react-icons/bs'
+import { useDispatch } from 'react-redux'
+import { addItemToCart } from '../Actions'
+import { Link } from 'react-router-dom'
 
 const BrziPregled = ({ book, onClose }) => {
 
     const handleChildClick = (event) => {
         event.stopPropagation(); // Prevent event from reaching the parent wrapper
       };
+      const dispatch = useDispatch();
 
   return (
     <Wrapper onClick={onClose}>
@@ -33,16 +37,16 @@ const BrziPregled = ({ book, onClose }) => {
                     <h3>{book.realPrice}RSD</h3>
                     <Cena>Cena na sajtu: {book.price} RSD</Cena>
                     <p>Ušteda: {((book.realPrice - book.price))} RSD</p>
-                <Btn onClick={onClose}>X</Btn>
+                <X onClick={onClose}>X</X>
                 <Flex>
                     <PriceDiv>
                         <Button>-</Button>
                         <County>1</County>
                         <Button>+</Button>
                     </PriceDiv>
-                    <Dodaj>DODAJ U KORPU<BsFillCartFill style={{marginLeft:'0.5rem'}} size={20}/></Dodaj>
+                    <Dodaj onClick={() => dispatch((addItemToCart(book)))} >DODAJ U KORPU<BsFillCartFill style={{marginLeft:'0.5rem'}} size={20}/></Dodaj>
                 </Flex>
-                    <Detaljnije>DETALJNIJE</Detaljnije>
+                <Link to="/Detaljnije" state={{ book: {book} }}><Btn>DETALJNIJE</Btn></Link>
             </ContentDiv>
         </Box>
     </Wrapper>
@@ -67,8 +71,15 @@ const Flex = styled.div`
     justify-content: flex-start;
     align-items:center;
     margin-top: 2.5rem;
+    @media (max-width: 900px) {
+        justify-content:center;
+        margin-top: 0.5rem;
+    }
+    @media (max-width: 500px) {
+        flex-direction:column;
+    }
 `
-const Detaljnije = styled.button`
+const Btn = styled.button`
     width: 150px;
     height: 30px;
     font-size: 0.9rem;
@@ -80,6 +91,9 @@ const Detaljnije = styled.button`
     &:hover{
         background: red;
         transition: 0.3s ease;
+    }
+    @media (max-width: 900px) {
+        margin-top: 0.5rem;
     }
 `
 const Dodaj = styled.button`
@@ -98,6 +112,10 @@ const Dodaj = styled.button`
         opacity:80%;
         transition: 0.3s ease;
     }
+    @media (max-width: 900px) {
+        font-size: 0.9rem;
+        height: 30px;
+    }
 `
 const PriceDiv = styled.div`
     display:flex;
@@ -106,6 +124,9 @@ const PriceDiv = styled.div`
     justify-content:center;
     align-items:center;
     font-size: 1.2rem;
+    @media (max-width: 500px) {
+        margin-bottom: 0.5rem;
+    }    
 `
 const Button = styled.button`
     border:none;
@@ -125,9 +146,16 @@ const Line = styled.div`
     width:100%;
     height: 1px;
     background: darkgrey;
+    @media (max-width: 900px) {
+        margin-left: 1rem;
+        width:90%;
+    }
 `
 const MarginDiv = styled.div`
     margin-bottom: 1rem;
+    @media (max-width: 900px) {
+        margin-bottom: 0.5rem;
+    }
 `
 const Box = styled.div`
     position:relative;
@@ -136,6 +164,19 @@ const Box = styled.div`
     background: white;
     display:flex;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Add shadow effect */
+    @media (max-width: 1350px) {
+        width: 80%;
+    }
+    @media (max-width: 900px) {
+        width: 70%;
+        height: 98%;
+        flex-direction:column;
+        justify-content:center;
+        align-items:center;
+    }
+    @media (max-width: 750px) {
+        width: 90%;
+    }
 `   
 const ImgDiv = styled.div`
     position:relative;
@@ -148,6 +189,19 @@ const ImgDiv = styled.div`
     img{
         object-fit:cover;
     }
+    @media (max-width: 900px) {
+        width: 100%;
+        height: 50%;
+        padding-left: 0rem;
+        padding-bottom: 0rem;
+        padding-top: 0rem;
+        padding: 1rem;
+        margin-top: 2rem;
+        justify-content:center;
+    }
+    @media (max-width: 400px) {
+        padding: 1rem;
+    }
 `
 const ContentDiv = styled.div`
     width:50%;
@@ -155,6 +209,9 @@ const ContentDiv = styled.div`
     padding-right:2rem;
     h2{
         margin: 1rem 0; 
+        @media (max-width: 500px) {
+            margin: 0 0;
+        }
     }
     p{
         font-size:1rem;
@@ -173,6 +230,13 @@ const ContentDiv = styled.div`
         font-weight:400;
         margin-top:1rem;
       }
+      @media (max-width: 900px) {
+        width:100%;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        flex-direction:column;
+      }
     `
 const Cena = styled.h5`
       color: red;
@@ -185,7 +249,7 @@ const Circle = styled.div`
    height:50px;
    border-radius: 50%;
    position: absolute;
-   right: 4rem;
+   left: 22rem;
    top: 0.5rem;
    background:	#FF0000;
    display:flex;
@@ -193,7 +257,9 @@ const Circle = styled.div`
    align-items:center;
    color:white;
    z-index:50;
-
+   @media (max-width: 900px){
+        left: 80%;
+   }
 `
 const BookTok = styled.div`
   background:#D70040;
@@ -210,7 +276,7 @@ const BookTok = styled.div`
   text-align:center;
   z-index:50;
 `
-const Btn = styled.button`
+const X = styled.button`
     position:absolute;
     top:1rem;
     right:2rem;

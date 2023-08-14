@@ -9,10 +9,15 @@ import {GrNext} from 'react-icons/gr'
 import { Link } from 'react-router-dom'
 import { useSelector, useDispatch } from 'react-redux'
 
+
 const Navbar = () => {
     const [kategorije, setKategorije] = useState(false);
     const [isWindowBelow750, setWindowBelow750] = useState(false);
     const [mobileMenu,setMobileMenu] = useState(false);
+
+    const cartItems = useSelector(state => state.cart.cartItems)
+
+    console.log(cartItems)
 
     useEffect(() => {
         const handleResize = () => {
@@ -48,7 +53,7 @@ const Navbar = () => {
                     </Heart>
                     <Cart>
                         <BsFillCartFill size={22} />
-                        <p></p>
+                        <p>{cartItems.length}</p>
                     </Cart>
             </InfoDiv>
         </TopNav>
