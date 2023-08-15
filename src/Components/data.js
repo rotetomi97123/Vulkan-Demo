@@ -37,7 +37,8 @@ export const Novo = [
         izdavac: 'STELA KNJIGE',
         popust: 10,
         booktok: false,
-        type: 'ROMAN'
+        type: 'ROMAN',
+        quantity: 1
     },
     {
         id:2,
@@ -49,7 +50,8 @@ export const Novo = [
         izdavac: 'VULKAN IZDAVAŠTVO',
         popust: 15,
         booktok: true,
-        type: 'LJUBAVNI ROMAN'
+        type: 'LJUBAVNI ROMAN',
+        quantity: 1
     },
     {
         id:3,
@@ -61,7 +63,8 @@ export const Novo = [
         izdavac: 'STELA KNJIGE',
         popust: 10,
         booktok: false,
-        type: 'LJUBAVNI ROMAN'
+        type: 'LJUBAVNI ROMAN',
+        quantity: 1
     },
     {
         id:4,
@@ -73,7 +76,8 @@ export const Novo = [
         izdavac: 'VULKAN IZDAVAŠTVO',
         popust: 15,
         booktok: false,
-        type: 'ROMAN'
+        type: 'ROMAN',
+        quantity: 1
     },
     {
         id:5,
@@ -85,7 +89,8 @@ export const Novo = [
         izdavac: 'BOOKA',
         popust: 10,
         booktok: false,
-        type: 'ROMAN'
+        type: 'ROMAN',
+        quantity: 1
     },
     {
         id:6,
@@ -97,7 +102,8 @@ export const Novo = [
         izdavac: 'GEOPOETIKA',
         popust: 5,
         booktok: false,
-        type: 'ROMAN'
+        type: 'ROMAN',
+        quantity: 1
     },
     {
         id:7,
@@ -109,7 +115,8 @@ export const Novo = [
         izdavac: 'VULKAN IZDAVAŠTVO',
         popust: 15,
         booktok: false,
-        type: 'LJUBAVNI ROMAN'
+        type: 'LJUBAVNI ROMAN',
+        quantity: 1
     },
     {
         id:8,
@@ -121,7 +128,8 @@ export const Novo = [
         izdavac: 'VULKAN IZDAVAŠTVO',
         popust: 15,
         booktok: false,
-        type: 'DOMAĆI ROMAN'
+        type: 'DOMAĆI ROMAN',
+        quantity: 1
     },
     {
         id:9,
@@ -133,7 +141,8 @@ export const Novo = [
         izdavac: 'LAGUNA',
         popust: 10,
         booktok: false,
-        type: 'ROMAN'
+        type: 'ROMAN',
+        quantity: 1
     }
 ]
 export const Top = [
@@ -147,7 +156,8 @@ export const Top = [
         izdavac: 'VULKAN IZDAVAŠTVO',
         popust: 15,
         booktok: false,
-        type: 'TRILERI/MISTERIJE'
+        type: 'TRILERI/MISTERIJE',
+        quantity: 1
     },
     {
         id:2,
@@ -159,7 +169,8 @@ export const Top = [
         izdavac: 'VULKAN IZDAVAŠTVO',
         popust: 15,
         booktok: true,
-        type: 'ROMAN'
+        type: 'ROMAN',
+        quantity: 1
     },
     {
         id:3,
@@ -171,7 +182,8 @@ export const Top = [
         izdavac: 'FINESA',
         popust: 10,
         booktok: false,
-        type: 'SAVETI ZA KARIJERU I POSTIZANJE USPEHA'
+        type: 'SAVETI ZA KARIJERU I POSTIZANJE USPEHA',
+        quantity: 1
     },
     {
         id:4,
@@ -183,7 +195,8 @@ export const Top = [
         izdavac: 'DEDIĆ',
         popust: 10,
         booktok: false,
-        type: 'DOMAĆI LJUBAVNI ROMAN'
+        type: 'DOMAĆI LJUBAVNI ROMAN',
+        quantity: 1
     },
     {
         id:5,
@@ -195,7 +208,8 @@ export const Top = [
         izdavac: 'LAGUNA',
         popust: 10,
         booktok: false,
-        type: 'DOMAĆI LJUBAVNI ROMAN'
+        type: 'DOMAĆI LJUBAVNI ROMAN',
+        quantity: 1
     },
     {
         id:6,
@@ -207,7 +221,8 @@ export const Top = [
         izdavac: 'ČIGOJA ŠTAMPA',
         popust: 10,
         booktok: false,
-        type: 'DOMAĆI ROMAN'
+        type: 'DOMAĆI ROMAN',
+        quantity: 1
     },
     {
         id:7,
@@ -219,7 +234,8 @@ export const Top = [
         izdavac: 'KONTRAST',
         popust: 10,
         booktok: false,
-        type: 'SAVETI ZA KARIJERU I POSTIZANJE USPEHA'
+        type: 'SAVETI ZA KARIJERU I POSTIZANJE USPEHA',
+        quantity: 1
     },
     {
         id:8,
@@ -231,7 +247,8 @@ export const Top = [
         izdavac: 'VULKAN IZDAVAŠTVO',
         popust: 15,
         booktok: false,
-        type: 'LJUBAVNI ROMAN'
+        type: 'LJUBAVNI ROMAN',
+        quantity: 1
     },
     {
         id:9,
@@ -243,7 +260,8 @@ export const Top = [
         izdavac: 'VULKAN IZDAVAŠTVO',
         popust: 15,
         booktok: true,
-        type: 'LJUBAVNI ROMAN'
+        type: 'LJUBAVNI ROMAN',
+        quantity: 1
     }
 ]
 export const TopEng = [
@@ -257,7 +275,8 @@ export const TopEng = [
         izdavac: 'PENGUIN',
         popust: 15,
         booktok: true,
-        type: 'CONTEMPORARY FICTION'
+        type: 'CONTEMPORARY FICTION',
+        quantity: 1
     },
     {
         id:2,
@@ -269,7 +288,8 @@ export const TopEng = [
         izdavac: 'LITTLE BROWN',
         popust: 15,
         booktok: true,
-        type: 'CRIME, THRILLERS & MYSTERY'
+        type: 'CRIME, THRILLERS & MYSTERY',
+        quantity: 1
     },
     {
         id:3,
@@ -281,7 +301,8 @@ export const TopEng = [
         izdavac: 'LITTLE BROWN',
         popust: 15,
         booktok: true,
-        type: 'CONTEMPORARY FICTION'
+        type: 'CONTEMPORARY FICTION',
+        quantity: 1
     },
     {
         id:4,
@@ -293,7 +314,8 @@ export const TopEng = [
         izdavac: 'SIMON&SHUSTER',
         popust: 15,
         booktok: true,
-        type: 'YOUNG ADULT LITERATURE & FICTION'
+        type: 'YOUNG ADULT LITERATURE & FICTION',
+        quantity: 1
     },
     {
         id:5,
@@ -305,7 +327,8 @@ export const TopEng = [
         izdavac: 'CARLTON BOOKS',
         popust: 15,
         booktok: false,
-        type: 'FASHION'
+        type: 'FASHION',
+        quantity: 1
     },
     {
         id:6,
@@ -317,7 +340,8 @@ export const TopEng = [
         izdavac: 'ORION',
         popust: 15,
         booktok: false,
-        type: 'CONTEMPORARY FICTION'
+        type: 'CONTEMPORARY FICTION',
+        quantity: 1
     },
     {
         id:7,
@@ -329,7 +353,8 @@ export const TopEng = [
         izdavac: 'DK',
         popust: 15,
         booktok: false,
-        type: 'PSIHOLOGY'
+        type: 'PSIHOLOGY',
+        quantity: 1
     },
     {
         id:8,
@@ -341,7 +366,8 @@ export const TopEng = [
         izdavac: 'SIMON&SHUSTER',
         popust: 15,
         booktok: false,
-        type: 'FANTASY'
+        type: 'FANTASY',
+        quantity: 1
     },
     {
         id:9,
@@ -353,7 +379,8 @@ export const TopEng = [
         izdavac: 'SIMON&SHUSTER',
         popust: 15,
         booktok: false,
-        type: 'POETRY'
+        type: 'POETRY',
+        quantity: 1
     }
 ]
 export const Stephen = [
@@ -367,7 +394,8 @@ export const Stephen = [
         izdavac: 'HODDER',
         popust: 15,
         booktok: false,
-        type: 'CRIME, THRILLERS & MYSTERY'
+        type: 'CRIME, THRILLERS & MYSTERY',
+        quantity: 1
     },
     {
         id:2,
@@ -379,7 +407,8 @@ export const Stephen = [
         izdavac: 'HODDER',
         popust: 15,
         booktok: false,
-        type: 'CRIME, THRILLERS & MYSTERY'
+        type: 'CRIME, THRILLERS & MYSTERY',
+        quantity: 1
     },
     {
         id:3,
@@ -391,7 +420,8 @@ export const Stephen = [
         izdavac: 'HODDER',
         popust: 15,
         booktok: false,
-        type: 'CRIME, THRILLERS & MYSTERY'
+        type: 'CRIME, THRILLERS & MYSTERY',
+        quantity: 1
     },
     {
         id:4,
@@ -403,7 +433,8 @@ export const Stephen = [
         izdavac: 'HODDER',
         popust: 15,
         booktok: false,
-        type: 'CRIME, THRILLERS & MYSTERY'
+        type: 'CRIME, THRILLERS & MYSTERY',
+        quantity: 1
     },
     {
         id:5,
@@ -415,7 +446,8 @@ export const Stephen = [
         izdavac: 'HODDER',
         popust: 15,
         booktok: false,
-        type: 'CRIME, THRILLERS & MYSTERY'
+        type: 'CRIME, THRILLERS & MYSTERY',
+        quantity: 1
     },
     {
         id:6,
@@ -427,7 +459,8 @@ export const Stephen = [
         izdavac: 'HODDER',
         popust: 15,
         booktok: false,
-        type: 'CRIME, THRILLERS & MYSTERY'
+        type: 'CRIME, THRILLERS & MYSTERY',
+        quantity: 1
     },
     {
         id:7,
@@ -439,7 +472,8 @@ export const Stephen = [
         izdavac: 'HODDER',
         popust: 15,
         booktok: false,
-        type: 'CRIME, THRILLERS & MYSTERY'
+        type: 'CRIME, THRILLERS & MYSTERY',
+        quantity: 1
     },
     {
         id:8,
@@ -451,7 +485,8 @@ export const Stephen = [
         izdavac: 'HODDER',
         popust: 15,
         booktok: false,
-        type: 'CRIME, THRILLERS & MYSTERY'
+        type: 'CRIME, THRILLERS & MYSTERY',
+        quantity: 1
     },
     {
         id:9,
@@ -463,7 +498,8 @@ export const Stephen = [
         izdavac: 'HODDER',
         popust: 15,
         booktok: false,
-        type: 'CRIME, THRILLERS & MYSTERY'
+        type: 'CRIME, THRILLERS & MYSTERY',
+        quantity: 1
     }
 ]
 export const Hoover = [

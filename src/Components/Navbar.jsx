@@ -17,7 +17,6 @@ const Navbar = () => {
 
     const cartItems = useSelector(state => state.cart.cartItems)
 
-    console.log(cartItems)
 
     useEffect(() => {
         const handleResize = () => {
@@ -51,10 +50,12 @@ const Navbar = () => {
                         <AiOutlineHeart size={20} />
                         <p>0</p>
                     </Heart>
-                    <Cart>
-                        <BsFillCartFill size={22} />
-                        <p>{cartItems.length}</p>
-                    </Cart>
+                    <Link to='/kupovina'>
+                        <Cart>
+                            <BsFillCartFill size={22} />
+                            <p>{cartItems.length}</p>
+                        </Cart>
+                    </Link>
             </InfoDiv>
         </TopNav>
         <BottomNav>
@@ -355,6 +356,11 @@ const NavTitle = styled.p`
     display:flex;
     justify-content:center;
     align-items:center;
+    a{
+        text-decoration:none;
+        link-style-type: none;
+        color:white;
+    }
     p{
         &:hover{
             text-decoration: underline; 
