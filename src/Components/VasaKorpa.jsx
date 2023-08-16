@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 import { useSelector, useDispatch } from 'react-redux'
 import { removeItemFromCart,handleIncrement,handleDecrement } from '../Actions'
+import Isporuke from './Isporuke'
 
 
 const VasaKorpa = () => {
@@ -21,61 +22,64 @@ const VasaKorpa = () => {
         </Prazna> 
         <Link to='/'><Nastavi>NASTAVI SA KUPOVINOM</Nastavi></Link> 
       </>  :
+      <>
       <CartWrap>
-        <Box>
-          <span>
-            <p>Proizvod</p> 
-          </span>
-          <Price>
-            <p>Cena</p> 
-          </Price>
-          <Price>
-            <p>Popust</p> 
-          </Price>
-          <Price>
-            <p>Cena sa popustom</p> 
-          </Price>
-          <Price>
-            <p>Količina</p> 
-          </Price>
-          <Price>
-            <p>Ukupno</p> 
-          </Price>
-        </Box>
-        {cartItems.map((item, index) => {
-          return(
-            <ItemBox key={item.id}>
-                <ImgDiv>
-                  <img src={item.img} />
-                </ImgDiv>
-                <span>
-                  <div>
-                    <p>{item.type}</p>
-                    <p>{item.name}</p>
-                    <h4>Šifra artikla: 335206</h4>    
-                  </div>
-                </span>
-                <Price>
-                  <p>{item.realPrice},00 RSD</p>
-                </Price>
-                <Price>
-                  <p>{item.popust},00%</p>
-                </Price>
-                <Price>
-                  <p>{item.price},00 RSD</p>
-                </Price>
-                <Price>
-                  <h4  onClick={() => dispatch((handleDecrement(item)))}>-</h4>
-                  <p>{item.quantity}</p>
-                  <h4 onClick={() => dispatch((handleIncrement(item)))}>+</h4>
-                </Price>
-                <Price>
-                  <p>{(item.quantity)*(item.price)},00 RSD</p>
-                </Price>
-                <Izbrisi onClick={() => dispatch((removeItemFromCart(index)))}>IZBRIŠITE</Izbrisi>
-            </ItemBox>
-          )
-        })}
+        <ScrollFuntion>
+          <Box>
+            <span>
+              <p>Proizvod</p> 
+            </span>
+            <Price>
+              <p>Cena</p> 
+            </Price>
+            <Price>
+              <p>Popust</p> 
+            </Price>
+            <Price>
+              <p>Cena sa popustom</p> 
+            </Price>
+            <Price>
+              <p>Količina</p> 
+            </Price>
+            <Price>
+              <p>Ukupno</p> 
+            </Price>
+          </Box>
+          {cartItems.map((item, index) => {
+            return(
+              <ItemBox key={item.id}>
+                  <ImgDiv>
+                    <img src={item.img} />
+                  </ImgDiv>
+                  <span>
+                    <div>
+                      <p>{item.type}</p>
+                      <p>{item.name}</p>
+                      <h4>Šifra artikla: 335206</h4>    
+                    </div>
+                  </span>
+                  <Price>
+                    <p>{item.realPrice},00 RSD</p>
+                  </Price>
+                  <Price>
+                    <p>{item.popust},00%</p>
+                  </Price>
+                  <Price>
+                    <p>{item.price},00 RSD</p>
+                  </Price>
+                  <Price>
+                    <h4  onClick={() => dispatch((handleDecrement(item)))}>-</h4>
+                    <p>{item.quantity}</p>
+                    <h4 onClick={() => dispatch((handleIncrement(item)))}>+</h4>
+                  </Price>
+                  <Price>
+                    <p>{(item.quantity)*(item.price)},00 RSD</p>
+                  </Price>
+                  <Izbrisi onClick={() => dispatch((removeItemFromCart(index)))}>IZBRIŠITE</Izbrisi>
+              </ItemBox>
+            )
+          })}
+        </ScrollFuntion>
         <UkupnoDiv>
           <span>
             <p>Ukupno: </p>
@@ -83,6 +87,7 @@ const VasaKorpa = () => {
           </span>
         </UkupnoDiv>
       </CartWrap>
+      </>
       }
     </Wrapper>
   )
@@ -103,6 +108,10 @@ const Wrapper = styled.div`
     color:#333333;
     font-weight: 450;
     margin-bottom: 0.5rem;
+    @media (max-width: 1200px) {
+      margin-left: 1rem;
+      margin-top: 1rem;
+    }
   }
 `
 const UkupnoDiv = styled.div`
@@ -126,6 +135,7 @@ const Box = styled.div`
   display:flex;
   font-weight: bold;
   margin-bottom: 0.5rem;
+  margin-left: 1rem;
   span{
     width: 510px;
     display:flex;
@@ -143,6 +153,9 @@ align-items: center;
 img{
   max-width: 100%;
   height: auto;
+}
+@media (max-width: 1200px) {
+  display:none;
 }
 `
 const Izbrisi = styled.button`
@@ -168,6 +181,9 @@ const Price = styled.div`
       font-size: 1.2rem;
       cursor:pointer;
     }
+    @media (max-width: 1200px) {
+      margin: 0 1rem;
+    }
 `
 const ItemBox = styled.div`
   width: 100%;
@@ -187,12 +203,22 @@ const ItemBox = styled.div`
     h4{
       color: grey;
     }
+    @media (max-width: 1200px) {
+      margin: 0 1rem;
+    }
   }
   &:hover{
     background: #EDEDED ;
     transition: 0.3s ease;
   }
+  
 `
+const ScrollFuntion = styled.div`
+  @media (max-width: 1200px) {
+    overflow-x: auto;   /* Enable horizontal scrolling when content overflows */
+    white-space: nowrap;
+  
+  `
 const CartWrap = styled.div`
   width: 100%;
 

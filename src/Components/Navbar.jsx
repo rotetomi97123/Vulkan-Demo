@@ -12,6 +12,8 @@ import { useSelector, useDispatch } from 'react-redux'
 
 const Navbar = () => {
     const [kategorije, setKategorije] = useState(false);
+    const [isMouseOver,setMouseOver] = useState(false);
+
     const [isWindowBelow750, setWindowBelow750] = useState(false);
     const [mobileMenu,setMobileMenu] = useState(false);
 
@@ -77,9 +79,16 @@ const Navbar = () => {
                 </span>
             </Box>
         </BottomNav>
-        <RealNav>
+        <RealNav onMouseEnter={()=> {setMouseOver(true)}}>
             <BsHouseFill size={30} color='gray' />
-            <p onMouseEnter={()=>{setKategorije(true)}} >KATEGORIJE</p>
+            <p onMouseEnter={() => {
+                setKategorije(true);
+                ;
+            }} onMouseLeave={() => {
+                if(isMouseOver === false){
+                    setKategorije(false)
+                }
+            }} >KATEGORIJE</p>
             <p>AKCIJE</p>
             <p>NOVA IZDANJA</p>
             <p>#BOOKTOK</p>
@@ -89,7 +98,10 @@ const Navbar = () => {
                 <SearchInput type="text" placeholder="Pretraži sajt" />
                 <SearchButton type="button"><BiSearchAlt2 size={25}/></SearchButton>
             </SearchContainer>
-            {kategorije &&<Kategorije onMouseLeave={()=>{setKategorije(false)}}>
+            {kategorije && <Kategorije onMouseLeave={() => {
+                setKategorije(false);
+                setMouseOver(false);
+            }} onMouseEnter={() => {setMouseOver(true)}}>
                 <p>KNJIGE</p>
                 <p>ZA DECU</p>
                 <p>ENGLISH BOOKS</p>
@@ -102,7 +114,7 @@ const Navbar = () => {
             <Flex>
                 <div>
                     <Hamburger size={42} onClick={()=>(setMobileMenu(!mobileMenu))} />
-                    <img src='https://www.knjizare-vulkan.rs/files/images/vulkan/logo.png.webp' />
+                    <Link to='/'><img src='https://www.knjizare-vulkan.rs/files/images/vulkan/logo.png.webp' /></Link> 
                 </div>
                 <span>
                     <Heart>

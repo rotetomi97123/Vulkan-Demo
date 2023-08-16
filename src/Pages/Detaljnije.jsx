@@ -5,6 +5,7 @@ import Newsletter from '../Components/Newsletter'
 import Footer from '../Components/Footer'
 import {BsFillCartFill} from 'react-icons/bs'
 import { useLocation } from 'react-router-dom';
+import {AiOutlineHeart} from 'react-icons/ai'
 
 const Detaljnije = () => {
   const location = useLocation();
@@ -38,9 +39,17 @@ const Detaljnije = () => {
                         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis eum nam suscipit sint nulla, quis, aliquam dicta a temporibus minus ex! Neque magni animi a molestiae sint consectetur ratione repellat.
                     </MarginDiv>
                         <Line />
-                        <h3>{book.book.realPrice}RSD</h3>
-                        <Cena>Cena na sajtu: {book.book.price} RSD</Cena>
-                        <p>Ušteda: {((book.book.realPrice - book.book.price))} RSD</p>
+                        <FlexBox>
+                            <div>
+                                <h3>{book.book.realPrice}RSD</h3>
+                                <Cena>Cena na sajtu: {book.book.price} RSD</Cena>
+                                <p>Ušteda: {((book.book.realPrice - book.book.price))} RSD</p>
+                            </div>
+                            <span>
+                                <img src='https://www.knjizare-vulkan.rs/files/images/2023/4/18/kolicinski.png' alt='popust' />
+                                <p>Dodatnih 10% popustana <br /> tri i više kupljenih artikala koji nisu na akciji.</p>
+                            </span>
+                        </FlexBox>
                     <Flex>
                         <PriceDiv>
                             <Button>-</Button>
@@ -50,6 +59,10 @@ const Detaljnije = () => {
                         <Dodaj>DODAJ U KORPU<BsFillCartFill style={{marginLeft:'0.5rem'}} size={20}/></Dodaj>
                     </Flex>
                         <DetaljnijeBtn>DETALJNIJE</DetaljnijeBtn>
+                        <Zelja>
+                            <AiOutlineHeart size={20} style={{cursor:'pointer'}}  />
+                            <p>Sačuvajte u listi želja</p>
+                        </Zelja>
                 </ContentDiv>
             </Box>
         </Wrapper>
@@ -64,6 +77,26 @@ const Wrapper = styled.div`
     display:flex;
     justify-content:center;
     align-items:center;
+    padding: 0 15rem;
+    @media (max-width: 1700px) {
+      padding: 0 1rem;
+    }
+    @media (max-width: 700px) {
+      padding: 0 0rem;
+    }
+    @media (max-width: 1500px) {
+        height: auto;
+    }
+`
+const Zelja = styled.div`
+    display:flex;
+    justify-content:flex-start;
+    align-items:center;
+    margin-top: 1rem;
+    p{
+        margin-left: 0.5rem;
+        cursor:pointer;
+    }
 `
 const Flex = styled.div`
     display:flex;
@@ -71,6 +104,29 @@ const Flex = styled.div`
     justify-content: flex-start;
     align-items:center;
     margin-top: 2.5rem;
+`
+const FlexBox = styled.div`
+    display:flex;
+    justify-content:flex-start;
+    align-items:center;
+    margin-top:2rem;
+    span{
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        margin-left:1rem;
+        p{
+            color:black;
+            font-size: 0.8rem;
+            margin-left: 0.5rem;
+        }
+        @media (max-width: 800px){
+            margin-top: 1rem;
+        }
+    }
+    @media (max-width: 800px) {
+        flex-direction:column;
+    }
 `
 const DetaljnijeBtn = styled.button`
     width: 150px;
@@ -101,6 +157,9 @@ const Dodaj = styled.button`
     &:hover{
         opacity:80%;
         transition: 0.3s ease;
+    }
+    @media (max-width: 800px) {
+        font-size: 0.8rem
     }
 `
 const PriceDiv = styled.div`
@@ -137,10 +196,16 @@ const MarginDiv = styled.div`
 `
 const Box = styled.div`
     position:relative;
-    width: 60%;
+    width: 65%;
     height:75%;
     background: white;
     display:flex;
+    @media (max-width: 1500px) {
+        flex-direction:column;
+        width: 100%;
+        justify-content:center;
+        align-items:center;
+    }
 `   
 const ImgDiv = styled.div`
     position:relative;
@@ -152,6 +217,15 @@ const ImgDiv = styled.div`
     padding-top: 1.5rem;
     img{
         object-fit:cover;
+        @media (max-width: 800px) {
+            width: 300px;
+        }
+    }
+    @media (max-width: 1500px) {
+        justify-content:center;
+        padding-left: 0rem;
+        padding-bottom: 0rem;
+        padding-top: 2rem;
     }
 `
 const ContentDiv = styled.div`
@@ -178,6 +252,12 @@ const ContentDiv = styled.div`
         font-weight:400;
         margin-top:1rem;
       }
+      @media (max-width: 1500px) {
+        width: 80%;
+        height: 50%;
+        
+    }
+      
     `
 const Cena = styled.h5`
       color: red;
@@ -190,7 +270,7 @@ const Circle = styled.div`
    height:50px;
    border-radius: 50%;
    position: absolute;
-   left: 22rem;
+   left: 21rem;
    top: 0.5rem;
    background:	#FF0000;
    display:flex;
@@ -198,6 +278,13 @@ const Circle = styled.div`
    align-items:center;
    color:white;
    z-index:50;
+   @media (max-width: 1500px) {
+        left: 77%;
+    }
+    @media (max-width: 800px) {
+        left: 120%;
+        right: 0rem;
+    }
 
 `
 const BookTok = styled.div`
