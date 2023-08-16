@@ -177,6 +177,10 @@ const Box = styled.div`
     @media (max-width: 750px) {
         width: 90%;
     }
+    @media (max-width: 400px) {
+        height: 100%;
+        width:100%;
+    }
 `   
 const ImgDiv = styled.div`
     position:relative;
@@ -211,6 +215,10 @@ const ContentDiv = styled.div`
         margin: 1rem 0; 
         @media (max-width: 500px) {
             margin: 0 0;
+        }
+        @media (max-width: 400px) {
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
         }
     }
     p{

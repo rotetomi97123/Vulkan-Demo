@@ -109,6 +109,8 @@ const ArrowDiv = styled.div`
   }
   @media (max-width: 700px) {
     font-size: 3rem;
+    height: 80%;
+    padding: 0 0;
   }
 
 `

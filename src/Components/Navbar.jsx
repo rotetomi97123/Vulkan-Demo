@@ -121,10 +121,12 @@ const Navbar = () => {
                         <AiOutlineHeart size={20} />
                         <p>0</p>
                     </Heart>
-                    <CartMobile>
-                        <BsFillCartFill size={22} />
-                        <p>0</p>
-                    </CartMobile>
+                    <Link to='/kupovina'>
+                        <CartMobile>
+                            <BsFillCartFill size={22} />
+                            <p>0</p>
+                        </CartMobile>
+                    </Link> 
                 </span>
             </Flex>
             <MobileTitle>BESPLATNA DOSTAVA Za porudžbine preko 3000 dinara</MobileTitle>
@@ -159,6 +161,11 @@ const Flex = styled.div`
     padding: 0.5rem 0.5rem;
     align-items:center;
     width: 100%;
+    a{
+        text-decoration:none;
+        link-style-type: none;
+        color:black;
+    }
     @media (max-width: 500px){
         img{
             width:150px;
