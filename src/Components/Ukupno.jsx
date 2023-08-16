@@ -8,41 +8,44 @@ const Ukupno = () => {
     const cartItems = useSelector(state => state.cart.cartItems)
 
   return (
-    <Wrapper>
-        <h1>UKUPNO ZA PLAĆANJE</h1>
-        <Line />
-        <Box>
-            <span>
-                <p>Ukupno:</p>
-                <h3>{cartItems.reduce((acc, item) => acc + ((item.quantity)*(item.price)), 0).toFixed(0)},00 RSD</h3>
-            </span>
-        </Box>
-        <Box>
-            <span>
-                <p>Ušteda:</p>
-                <h3>{cartItems.reduce((acc, item) => acc + ((item.quantity)*(item.realPrice)), 0)-cartItems.reduce((acc, item) => acc + ((item.quantity)*(item.price)), 0)},00 RSD</h3>
-            </span>
-        </Box>
-        <Box>
-            <span>
-                <p>Troškovi dostave:</p>
-                <h3>Besplatni troškovi dostave</h3>
-            </span>
-        </Box>
-        <Box>
-            <span>
-                <p>Ukupno za plaćanje sa PDV-om:</p>
-                <h2>{cartItems.reduce((acc, item) => acc + ((item.quantity)*(item.price)), 0).toFixed(0)},00 RSD</h2>
-            </span>
-        </Box>
-        <PotvrdiBox>
-            <CheckboxContainer>
-                    <StyledCheckbox />
-                    Klikom na dugme, slažeš se sa <div style={{marginLeft:'0.5rem',color:'red'}}>Uslovima korišćenja i prodaje.</div>
-            </CheckboxContainer>
-            <Btn>POTVRDI</Btn>
-        </PotvrdiBox>
-    </Wrapper>
+    <>
+    {cartItems.length === 0 ? '' :
+        <Wrapper>
+            <h1>UKUPNO ZA PLAĆANJE</h1>
+            <Line />
+            <Box>
+                <span>
+                    <p>Ukupno:</p>
+                    <h3>{cartItems.reduce((acc, item) => acc + ((item.quantity)*(item.price)), 0).toFixed(0)},00 RSD</h3>
+                </span>
+            </Box>
+            <Box>
+                <span>
+                    <p>Ušteda:</p>
+                    <h3>{cartItems.reduce((acc, item) => acc + ((item.quantity)*(item.realPrice)), 0)-cartItems.reduce((acc, item) => acc + ((item.quantity)*(item.price)), 0)},00 RSD</h3>
+                </span>
+            </Box>
+            <Box>
+                <span>
+                    <p>Troškovi dostave:</p>
+                    <h3>Besplatni troškovi dostave</h3>
+                </span>
+            </Box>
+            <Box>
+                <span>
+                    <p>Ukupno za plaćanje sa PDV-om:</p>
+                    <h2>{cartItems.reduce((acc, item) => acc + ((item.quantity)*(item.price)), 0).toFixed(0)},00 RSD</h2>
+                </span>
+            </Box>
+            <PotvrdiBox>
+                <CheckboxContainer>
+                        <StyledCheckbox />
+                        Klikom na dugme, slažeš se sa <div style={{marginLeft:'0.5rem',color:'red'}}>Uslovima korišćenja i prodaje.</div>
+                </CheckboxContainer>
+                <Btn>POTVRDI</Btn>
+            </PotvrdiBox>
+        </Wrapper>}
+    </>
   )
 }
 
