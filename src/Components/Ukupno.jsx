@@ -59,16 +59,25 @@ const Wrapper = styled.div`
     @media (max-width: 700px) {
         margin-left: 1rem;
         }   
+        @media (max-width: 500px) {
+          font-size:1rem;
+        }
     }
     span{
         width: 450px;
         display:flex;
         justify-content:space-between;
         align-items:center;
+        @media (max-width: 500px) {
+          width:80%;
+        }
         h2{
             font-weight:600;
             font-size: 1.3rem;
             color:red;
+            @media (max-width: 500px) {
+              font-size:1.1rem;
+            }
         }
     }
   @media (max-width: 1700px) {
@@ -77,7 +86,9 @@ const Wrapper = styled.div`
   @media (max-width: 700px) {
     padding: 0 0rem;
   }
-  
+  @media (max-width: 500px) {
+    font-size:1rem;
+  }
 `
 const Btn = styled.button`
   width: 250px;

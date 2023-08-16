@@ -196,7 +196,7 @@ const MarginDiv = styled.div`
 `
 const Box = styled.div`
     position:relative;
-    width: 65%;
+    width: 80%;
     height:75%;
     background: white;
     display:flex;

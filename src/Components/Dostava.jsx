@@ -25,7 +25,7 @@ const Dostava = () => {
                     <BigBox>
                         <img src='https://www.knjizare-vulkan.rs/files/thumbs/files/images/vulkan/thumbs_150/vulkan_knjizare_150px.png' />
                         <span>
-                            <h2>Platnom karticom</h2>
+                            <h2>Preuzimanje u radnji</h2>
                             <p>Preuzmite svoju porudžbinu u knjižari Vulkan, Sremska 2, 11000 Beograd.</p>
                             <h2 style={{fontSize:'0.9rem'}}> Rok za preuzimanje je najranije sledećeg radnog dana nakon 16h od trenutka poručivanja. Obaveštenje da je porudžbina spremna za preuzimanje poslaćemo vam putem emaila.</h2>
                             <p>Ovaj vid isporuke je besplatan i dostupan isključivo za porudžbine plaćene platnom karticom i IPS sken.</p>

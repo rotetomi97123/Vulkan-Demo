@@ -231,10 +231,14 @@ const Nastavi = styled.button`
   color: white;
   font-size: 0.9rem;
   margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
   cursor:pointer;
   &:hover{
     opacity:80%;
     transition: 0.3s ease;
+}
+@media (max-width: 1500px) {
+  margin-left: 1.5rem;
 }
 `
 const Line = styled.div`
@@ -244,12 +248,15 @@ const Line = styled.div`
   margin-bottom: 1.5rem;
 `
 const Prazna = styled.div`
-  width:100%;
-  padding: 0.4rem;
-  padding-left: 1rem;
-  border: 1px solid #DDDDDD;
-  color: #AA4A44;
-  font-size: 1rem;
-  background: #FADDE1;
+width:100%;
+padding: 0.4rem;
+padding-left: 1rem;
+border: 1px solid #DDDDDD;
+color: #AA4A44;
+font-size: 1rem;
+background: #FADDE1;
+@media (max-width: 1500px) {
+  margin-left: 1.5rem;
+}
 `
 export default VasaKorpa

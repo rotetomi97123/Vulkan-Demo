@@ -89,7 +89,7 @@ const Navbar = () => {
                     setKategorije(false)
                 }
             }} >KATEGORIJE</p>
-            <p>AKCIJE</p>
+            <Link to='/Akcija'><p>AKCIJE</p></Link>
             <p>NOVA IZDANJA</p>
             <p>#BOOKTOK</p>
             <p>HARRY POTTER</p>
@@ -262,6 +262,10 @@ const RealNav = styled.div`
     padding: 0 15rem;
     border-top: 1px solid #CCCCCC;
     border-bottom: 1px solid #CCCCCC;
+    a{
+        text-decoration:none;
+        list-style-type:none;
+    }
     p{
         margin: 0 2rem;
         color: grey;
