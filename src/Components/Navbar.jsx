@@ -124,7 +124,7 @@ const Navbar = () => {
                     <Link to='/kupovina'>
                         <CartMobile>
                             <BsFillCartFill size={22} />
-                            <p>0</p>
+                            <p>{cartItems.length}</p>
                         </CartMobile>
                     </Link> 
                 </span>
