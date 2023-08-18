@@ -18,7 +18,7 @@ const HomePage = () => {
   const [ColImg, setColImg] = useState(Hoover)
   const [manges, setManges] = useState(Manga)
   
-
+  
   return (
     <Wrapper>
         <Navbar />

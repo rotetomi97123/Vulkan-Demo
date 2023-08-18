@@ -4,23 +4,27 @@ import Navbar from '../Components/Navbar'
 import Newsletter from '../Components/Newsletter'
 import Footer from '../Components/Footer'
 import Books from '../Components/Books'
-import { do40,Popularna} from '../Components/data'
+import { do40,Popularna,Za500,AkcijaImage} from '../Components/data'
+import Colleen from '../Components/Colleen'
 
 
 const Akcija = () => {
 
   const [do40popust, setDo40popust] = useState(do40)
   const [popularnaBook,setPopularnaBook] = useState(Popularna)
+  const [za500book, setZa500book] = useState(Za500)
+
+  const [akcijaImg, setAkcijaImg] = useState(AkcijaImage)
 
   return (
     <div>
       <Navbar />
       <Wrapper>
-        <img src='https://i.ibb.co/w6JqH55/cold-smooth-tasty.png' />
+        <Colleen img={akcijaImg} />
       </Wrapper>
       <Books title='300 DO 40%' books={do40popust}/>
       <Books title='50% POPUSTA - POPULARNA PSIHOLOGIJA, YA, LJUBAVNI ROMANI' books={popularnaBook}/>
-
+      <Books title='KNJIGE ZA 499 DINARA' books={za500book}/>
       <Newsletter />
       <Footer />
     </div>

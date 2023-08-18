@@ -53,7 +53,7 @@ const Books = ({ title, books }) => {
      <Wrapper>
         <TitleDiv>
             <h1>{title}</h1>
-            <p>Pogledajte sve</p>
+            <Link to='/Allbooks'><p>Pogledajte sve</p></Link>
         </TitleDiv>
 
        <Splide
@@ -205,6 +205,11 @@ const TitleDiv = styled.div`
   flex-direction:column;
   justify-content:flex-end;
   align-items:center;
+  a{
+    text-decoration:none;
+    link-style-type:none;
+    color:black;
+  }
   h1{
     font-size: 1.5rem;
     font-weight: 400;

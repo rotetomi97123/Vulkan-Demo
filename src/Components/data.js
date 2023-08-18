@@ -740,6 +740,125 @@ export const Popularna = [
         quantity: 1
     }
 ]
+export const Za500 = [
+    {
+        id:1,
+        name: 'SREĆNA PORODICA KALUĐERA KOJI JE PRODAO SVOJ FERARI',
+        price: 499,
+        realPrice: 899,
+        img: 'https://www.vulkani.rs/files/thumbs/files/images/slike_proizvoda/thumbs_1200/23204_1200_1200px.jpg',
+        autor: 'Robin S. Šarma',
+        izdavac: 'VULKAN IZDAVAŠTVO',
+        popust: 44,
+        booktok: false,
+        type: 'ASERTIVNOST, MOTIVACIJA I SAMOPOŠTOVANJE',
+        quantity: 1
+    },
+    {
+        id: 2,
+        name: 'ČETIRI ŽENE IZ ISTANBULA',
+        price: 499,
+        realPrice: 999,
+        img: 'https://www.vulkani.rs/files/images/slike_proizvoda/24599.jpg',
+        autor: 'Ajše Kulin',
+        izdavac: 'VULKAN IZDAVAŠTVO',
+        popust: 50,
+        booktok: false,
+        type: 'ROMAN',
+        quantity: 1
+    },
+    {
+        id: 3,
+        name: 'ČOVEK BEZ GRANICA',
+        price: 499,
+        realPrice: 999,
+        img: 'https://www.knjizare-vulkan.rs/files/images/slike_proizvoda/357440.jpg',
+        autor: 'Ričard Č. Morais',
+        izdavac: 'VULKAN IZDAVAŠTVO',
+        popust: 50,
+        booktok: false,
+        type: 'ROMAN',
+        quantity: 1
+    },    
+    {
+        id: 4,
+        name: 'IDI KUDA TE SRCE VODI',
+        price: 499,
+        realPrice: 899,
+        img: 'https://www.vulkani.rs/files/images/slike_proizvoda/24864.jpg',
+        autor: 'Kejla Olson',
+        izdavac: 'VULKAN IZDAVAŠTVO',
+        popust: 44,
+        booktok: false,
+        type: 'ROMAN',
+        quantity: 1
+    },
+    {
+        id: 5,
+        name: 'KAPLJICA SREĆE',
+        price: 499,
+        realPrice: 899,
+        img: 'https://www.vulkani.rs/files/images/slike_proizvoda/25310.jpg',
+        autor: 'Antoan Loren',
+        izdavac: 'VULKAN IZDAVAŠTVO',
+        popust: 44,
+        booktok: false,
+        type: 'ROMAN',
+        quantity: 1
+    },
+    {
+        id: 6,
+        name: 'RATNIK MUDROSTI',
+        price: 499,
+        realPrice: 999,
+        img: 'https://www.vulkani.rs/files/images/slike_proizvoda/22496.jpg',
+        autor: 'Tomas Miler',
+        izdavac: 'VULKAN IZDAVAŠTVO',
+        popust: 50,
+        booktok: false,
+        type: 'ROMAN',
+        quantity: 1
+    },
+    {
+        id: 7,
+        name: 'SOFIJA',
+        price: 499,
+        realPrice: 899,
+        img: 'https://www.vulkani.rs/files/images/slike_proizvoda/23952.jpg',
+        autor: 'Katerina Bonvičini',
+        izdavac: 'VULKAN IZDAVAŠTVO',
+        popust: 44,
+        booktok: false,
+        type: 'ROMAN',
+        quantity: 1
+    },
+    {
+        id: 8,
+        name: 'DEVOJKA SA LJUBIČICAMA',
+        price: 499,
+        realPrice: 999,
+        img: 'https://www.vulkani.rs/files/images/slike_proizvoda/26064.jpg',
+        autor: 'Eloiza Džejms',
+        izdavac: 'VULKAN IZDAVAŠTVO',
+        popust: 50,
+        booktok: false,
+        type: 'LJUBAVNI ROMAN',
+        quantity: 1
+    },
+    {
+        id: 9,
+        name: 'OSTRVO ČUDA',
+        price: 499,
+        realPrice: 999,
+        img: 'https://www.vulkani.rs/files/images/slike_proizvoda/24866.png',
+        autor: 'Nora Roberts',
+        izdavac: 'VULKAN IZDAVAŠTVO',
+        popust: 50,
+        booktok: false,
+        type: 'LJUBAVNI ROMAN',
+        quantity: 1
+    }
+]
 export const Hoover = [
     {
         id:1,
@@ -759,6 +878,16 @@ export const Manga = [
         id:2,
         img:'https://i.ibb.co/MDpbbm7/Untitled-design-19.png',
     }
+]
+export const AkcijaImage = [
+    {
+        id: 1,
+        img: 'https://i.ibb.co/w6JqH55/cold-smooth-tasty.png'
+    },
+    {
+        id: 2,
+        img: 'https://i.ibb.co/5nMFryT/Untitled-design-20.png'
+    },
 ]
 export const bankImages = [
     {

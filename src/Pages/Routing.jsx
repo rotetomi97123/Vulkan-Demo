@@ -4,6 +4,7 @@ import HomePage from './HomePage'
 import Detaljnije from './Detaljnije'
 import Korpa from './Korpa'
 import Akcija from './Akcija'
+import AllBooks from './AllBooks'
 
 const Routing = () => {
   return (
@@ -12,6 +13,7 @@ const Routing = () => {
         <Route path='/Detaljnije' element={<Detaljnije />} />
         <Route path='/kupovina' element={<Korpa />} />
         <Route path='/Akcija' element={<Akcija />} />
+        <Route path='/Allbooks' element={<AllBooks />} />
     </Routes>
   )
 }

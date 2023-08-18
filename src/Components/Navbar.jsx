@@ -107,7 +107,7 @@ const Navbar = () => {
                 <p>ENGLISH BOOKS</p>
                 <p>GIFT</p>
                 <p>PARTY PROGRAM</p>
-                <p>POGLEDAJ SVE</p>
+                <Link to='/Allbooks'><p>POGLEDAJ SVE</p></Link>
             </Kategorije>}
         </RealNav>
         {isWindowBelow750 &&<MobileNav>
