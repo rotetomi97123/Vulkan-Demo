@@ -42,7 +42,6 @@ const AllBooks = () => {
             <Wrapper>
                 <SortingUp> 
                     <div>
-
                         <h1>Proizvodi</h1>  
                     </div>
                     <SelectWrap>
@@ -200,6 +199,12 @@ const SortingUp = styled.div`
     width: 200px;
     padding: 0.3rem;
     font-size: 1rem;
+    @media (max-width: 600px){
+      width: 120px;
+    }
+  }
+  @media (max-width: 600px){
+    padding: 0 0.5rem;
   }
 `
 const SortingLeft = styled.div`

@@ -16,6 +16,7 @@ const Navbar = () => {
 
     const [isWindowBelow750, setWindowBelow750] = useState(false);
     const [mobileMenu,setMobileMenu] = useState(false);
+    const [mobileKateg,setMobileKateg] = useState(false)
 
     const cartItems = useSelector(state => state.cart.cartItems)
 
@@ -24,7 +25,9 @@ const Navbar = () => {
         const handleResize = () => {
           setWindowBelow750(window.innerWidth < 750);
         };
-    
+        if(mobileMenu === false){
+            setMobileKateg(false)
+        }
         // Initial check when the component mounts
         handleResize();
     
@@ -35,7 +38,7 @@ const Navbar = () => {
         return () => {
           window.removeEventListener('resize', handleResize);
         };
-      }, []);
+      }, [mobileMenu]);
       
   return (
     <Nav>
@@ -136,27 +139,34 @@ const Navbar = () => {
                     <p>Registrujte se</p>
                 </span>
                 <span>
-                    <p>KATEGORIJE</p>
+                    <p onClick={()=>{setMobileKateg(prev => !prev)}}>KATEGORIJE</p>
                     <Arrow />
                 </span>
-                <p>AKCIJE</p>
+                <Link to='/Akcija'><p>AKCIJE</p></Link>
                 <p>NOVA IZDANJA</p>
                 <p>#BOOKTOK</p>
                 <p>HARRY POTTER</p>
                 <p>USKORO</p>
             </MobileMenu>}
+            {mobileKateg &&<MobileKategorija>
+                <p>KNJIGE</p>
+                <p>ZA DECU</p>
+                <p>ENGLISH BOOKS</p>
+                <p>GIFT</p>
+                <p>PARTY PROGRAM</p>
+            </MobileKategorija>}
         </MobileNav>}
 
     </Nav>
   )
 }
 const Nav = styled.div`
-    display:flex;
+display:flex;
     width:100%;
     flex-direction:column;
     `
 const Flex = styled.div`
-    display:flex;
+display:flex;
     justify-content: space-between;
     padding: 0.5rem 0.5rem;
     align-items:center;
@@ -169,6 +179,30 @@ const Flex = styled.div`
     @media (max-width: 500px){
         img{
             width:150px;
+        }
+    }
+`
+const MobileKategorija = styled.div`
+    z-index: 100;
+    width: 200px;
+    height: 260px;
+    border: 1px solid #cccccc;
+    background: #F2F2F2;
+    position: absolute;
+    top: 5.5rem;;
+    left: 15.5rem;
+    transition: 0.4s ease;
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items:center;
+    p{
+        font-size: 1rem;
+        margin-bottom:1rem;
+        cursor:pointer;
+        &:hover{
+            color:red;
+            transition: 0.3s ease;
         }
     }
 `
@@ -211,6 +245,11 @@ const MobileMenu = styled.div`
     justify-content:flex-start;
     align-items:flex-start;
     padding-top:2rem;
+    a{
+        text-decoration:none;
+        list-style-type:none;
+        color:black;
+    }
     span{
         display:flex;
         cursor:pointer;

@@ -119,6 +119,14 @@ const Box = styled.div`
   display:flex;
   justify-content:flex-end;
   margin: 0.5rem 0;
+  @media (max-width: 600px){
+    p{
+      font-size: 0.9rem;
+    }
+    h3{
+      font-size: 0.9rem;
+    }
+  }
 `
 const Line = styled.div`
   width:100%;
@@ -173,8 +181,8 @@ const CheckboxContainer = styled.label`
   margin-top:2rem;
   width:535px;
   @media (max-width: 700px) {
-    width:335px;
     font-size:0.9rem;
+    justify-content:center;
   }
 `;
 export default Ukupno
