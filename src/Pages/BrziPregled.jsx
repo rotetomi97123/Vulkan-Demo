@@ -158,6 +158,7 @@ const MarginDiv = styled.div`
     }
 `
 const Box = styled.div`
+    padding-top: 1rem;
     position:relative;
     width: 55%;
     height:60%;

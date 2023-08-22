@@ -889,6 +889,16 @@ export const AkcijaImage = [
         img: 'https://i.ibb.co/5nMFryT/Untitled-design-20.png'
     },
 ]
+export const Aleksandro = [
+    {
+        id: 1,
+        img: 'https://i.ibb.co/KFXZZR2/ALE.png'
+    },
+    {
+        id: 2,
+        img: 'https://i.ibb.co/0r80Qwv/alesandro-BARIKO.png'
+    },
+]
 export const bankImages = [
     {
         id:1,

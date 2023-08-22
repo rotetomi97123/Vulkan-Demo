@@ -4,9 +4,8 @@ import Navbar from '../Components/Navbar'
 import Newsletter from '../Components/Newsletter'
 import Footer from '../Components/Footer'
 import Books from '../Components/Books'
-import { do40,Popularna,Za500,AkcijaImage} from '../Components/data'
+import { do40,Popularna,Za500,AkcijaImage,Aleksandro} from '../Components/data'
 import Colleen from '../Components/Colleen'
-
 
 const Akcija = () => {
 
@@ -15,6 +14,7 @@ const Akcija = () => {
   const [za500book, setZa500book] = useState(Za500)
 
   const [akcijaImg, setAkcijaImg] = useState(AkcijaImage)
+  const [Aleksand,setAleksand] = useState(Aleksandro)
 
   return (
     <div>
@@ -24,6 +24,7 @@ const Akcija = () => {
       </Wrapper>
       <Books title='300 DO 40%' books={do40popust}/>
       <Books title='50% POPUSTA - POPULARNA PSIHOLOGIJA, YA, LJUBAVNI ROMANI' books={popularnaBook}/>
+      <Colleen img={Aleksand} />
       <Books title='KNJIGE ZA 499 DINARA' books={za500book}/>
       <Newsletter />
       <Footer />

@@ -6,10 +6,14 @@ import Footer from '../Components/Footer'
 import {BsFillCartFill} from 'react-icons/bs'
 import { useLocation } from 'react-router-dom';
 import {AiOutlineHeart} from 'react-icons/ai'
+import { useDispatch } from 'react-redux'
+import { addItemToCart } from '../Actions'
 
 const Detaljnije = () => {
   const location = useLocation();
   const { book } = location.state;
+
+  const dispatch = useDispatch();
 
   return (
     <div>
@@ -56,7 +60,7 @@ const Detaljnije = () => {
                             <County>1</County>
                             <Button>+</Button>
                         </PriceDiv>
-                        <Dodaj>DODAJ U KORPU<BsFillCartFill style={{marginLeft:'0.5rem'}} size={20}/></Dodaj>
+                        <Dodaj onClick={() => dispatch((addItemToCart(book)))}>DODAJ U KORPU<BsFillCartFill style={{marginLeft:'0.5rem'}} size={20}/></Dodaj>
                     </Flex>
                         <DetaljnijeBtn>DETALJNIJE</DetaljnijeBtn>
                         <Zelja>

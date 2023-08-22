@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import styled from 'styled-components'
 import {BiLogIn,BiSearchAlt2,BiMenu} from 'react-icons/Bi'
 import {AiOutlineHeart,AiOutlineQuestionCircle} from 'react-icons/ai'
@@ -19,7 +19,39 @@ const Navbar = () => {
     const [mobileKateg,setMobileKateg] = useState(false)
 
     const cartItems = useSelector(state => state.cart.cartItems)
+//
+    const [tooltipVisible, setTooltipVisible] = useState(false);
+    const closingTimeoutRef = useRef(null);
 
+    const handleMouseEnterButton = () => {
+    clearTimeout(closingTimeoutRef.current); // Clear any existing timeout
+    setTooltipVisible(true);
+    };
+
+    const handleMouseLeaveButton = () => {
+    // Set a timeout to close the tooltip after a brief delay
+    const timeout = setTimeout(() => {
+        setTooltipVisible(false);
+    }, 150); // Adjust the delay as needed
+
+    closingTimeoutRef.current = timeout;
+    };
+
+    const handleMouseEnterTooltip = () => {
+    clearTimeout(closingTimeoutRef.current); // Clear the timeout when entering tooltip
+    };
+
+    const handleMouseLeaveTooltip = () => {
+    // Set a timeout to close the tooltip after a brief delay
+    const timeout = setTimeout(() => {
+        setTooltipVisible(false);
+    }, 150); // Adjust the delay as needed
+
+    closingTimeoutRef.current = timeout;
+    }
+
+
+//
 
     useEffect(() => {
         const handleResize = () => {
@@ -84,14 +116,8 @@ const Navbar = () => {
         </BottomNav>
         <RealNav onMouseEnter={()=> {setMouseOver(true)}}>
             <BsHouseFill size={30} color='gray' />
-            <p onMouseEnter={() => {
-                setKategorije(true);
-                ;
-            }} onMouseLeave={() => {
-                if(isMouseOver === false){
-                    setKategorije(false)
-                }
-            }} >KATEGORIJE</p>
+            <p   onMouseEnter={handleMouseEnterButton}
+        onMouseLeave={handleMouseLeaveButton}>KATEGORIJE</p>
             <Link to='/Akcija'><p>AKCIJE</p></Link>
             <p>NOVA IZDANJA</p>
             <p>#BOOKTOK</p>
@@ -101,10 +127,9 @@ const Navbar = () => {
                 <SearchInput type="text" placeholder="Pretraži sajt" />
                 <SearchButton type="button"><BiSearchAlt2 size={25}/></SearchButton>
             </SearchContainer>
-            {kategorije && <Kategorije onMouseLeave={() => {
-                setKategorije(false);
-                setMouseOver(false);
-            }} onMouseEnter={() => {setMouseOver(true)}}>
+            {tooltipVisible  && <Kategorije  className="tooltip"
+          onMouseEnter={handleMouseEnterTooltip}
+          onMouseLeave={handleMouseLeaveTooltip}>
                 <p>KNJIGE</p>
                 <p>ZA DECU</p>
                 <p>ENGLISH BOOKS</p>
@@ -134,10 +159,6 @@ const Navbar = () => {
             </Flex>
             <MobileTitle>BESPLATNA DOSTAVA Za porudžbine preko 3000 dinara</MobileTitle>
             {mobileMenu &&<MobileMenu>
-                <span>
-                    <p>Prijavite se</p>
-                    <p>Registrujte se</p>
-                </span>
                 <span>
                     <p onClick={()=>{setMobileKateg(prev => !prev)}}>KATEGORIJE</p>
                     <Arrow />
@@ -184,13 +205,13 @@ display:flex;
 `
 const MobileKategorija = styled.div`
     z-index: 100;
-    width: 200px;
+    width: 40%;
     height: 260px;
     border: 1px solid #cccccc;
     background: #F2F2F2;
     position: absolute;
-    top: 5.5rem;;
-    left: 15.5rem;
+    top: 6.25rem;
+    left: 50%;
     transition: 0.4s ease;
     display:flex;
     flex-direction: column;
@@ -204,6 +225,12 @@ const MobileKategorija = styled.div`
             color:red;
             transition: 0.3s ease;
         }
+        @media (max-width: 350px){
+            font-size: 0.9rem;
+        }
+    }
+    @media (max-width: 500px){
+        top: 5.5rem;
     }
 `
 const Arrow = styled(GrNext)`
@@ -226,7 +253,9 @@ const MobileTitle = styled.div`
     display:flex;
     justify-content:center;
     align-items:center;
-
+    @media (max-width: 350px){
+        font-size: 0.6rem;
+    }
 `
 
 const MobileMenu = styled.div`
@@ -234,7 +263,7 @@ const MobileMenu = styled.div`
     position: absolute;
     top:6.3rem;
     left:0rem;
-    width: 250px;
+    width: 50%;
     height: 93vh;
     border: 1px solid #cccccc;
     background: #F2F2F2;
@@ -265,6 +294,9 @@ const MobileMenu = styled.div`
             color:red;
             transition:0.1s ease;
         }
+        @media (max-width: 350px){
+            font-size: 0.9rem;
+        }
     }
     @media (max-width: 500px){
         top:5.5rem;
@@ -280,6 +312,9 @@ const MobileNav = styled.div`
         -moz-user-select: none; /* Firefox */
         -webkit-user-select: none; /* Safari and Chrome */
         -ms-user-select: none; /* Internet Explorer/Edge */
+        @media (max-width: 350px){
+            width: 100px;
+        }
     }
     span{
         display:flex;

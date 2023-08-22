@@ -147,6 +147,9 @@ const Input = styled.input`
     width: 350px;
     height: 35px;
     padding-left:0.5rem;
+    @media (max-width: 500px) {
+        width: 250px;
+    }
 `
 const Drzava = styled.div`
     display:flex;
@@ -161,7 +164,9 @@ const Drzava = styled.div`
         height: 35px;
         @media (max-width: 700px) {
             width: 350px;
-
+        }
+        @media (max-width: 500px) {
+            width: 250px;
         }
     }
     @media (max-width: 700px) {
@@ -179,6 +184,9 @@ const SelectFlex = styled.div`
         margin-top: 0.5rem;
         width: 350px;
         height: 35px;
+        @media (max-width: 500px) {
+            width: 250px;
+        }
     }
     @media (max-width: 700px) {
         align-items:center;

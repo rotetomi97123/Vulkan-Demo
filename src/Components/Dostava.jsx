@@ -1,12 +1,13 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useSelector } from 'react-redux'
 import styled from 'styled-components'
+import {FaDotCircle} from 'react-icons/fa'
 
 const Dostava = () => {
 
     const cartItems = useSelector(state => state.cart.cartItems)
-
-
+    const [selectedDos, setSelectedDos] = useState('')
+    
   return (
     <>
     {cartItems.length === 0 ? '' :
@@ -15,14 +16,16 @@ const Dostava = () => {
             <Line />
             <Box>
                 <Flex>
-                    <SmallBox>
+                    <SmallBox onClick={() => {setSelectedDos('AKS')}}>
+                        {selectedDos === 'AKS' ? <Circle color='red' /> : ''}
                         <img src='https://www.knjizare-vulkan.rs/files/thumbs/files/images/thumbs_150/aks-logo_150px.png' />
                         <span>
                             <h2>AKS</h2>
                             <p>Proizvode dostavljamo kurirskom službom AKS Express.<br /> Neophodno je da ostavite broj telefona, kako bi kurir mogao <br />da Vas kontaktira prilikom isporuke. Kuriska služba vrši <br />isporuku proizvoda od 8 do 16h i to u roku od 24-72h radnim <br /> danima od trenutka preuzimanja paketa od nas. Upišite <br />adresu za dostavu na kojoj ćete biti u tom periodu.</p>
                         </span>
                     </SmallBox>
-                    <BigBox>
+                    <BigBox onClick={() => {setSelectedDos('RADNJI')}}>
+                        {selectedDos === 'RADNJI' ? <Circle color='red' /> : ''}
                         <img src='https://www.knjizare-vulkan.rs/files/thumbs/files/images/vulkan/thumbs_150/vulkan_knjizare_150px.png' />
                         <span>
                             <h2>Preuzimanje u radnji</h2>
@@ -35,7 +38,8 @@ const Dostava = () => {
                     </BigBox>
                 </Flex>
                 <Flex>
-                    <SmallBox>
+                    <SmallBox onClick={() => {setSelectedDos('KARTICA')}}>
+                        {selectedDos === 'KARTICA' ? <Circle color='red' /> : ''}
                         <img src='https://icon-library.com/images/money-stack-icon/money-stack-icon-13.jpg' />
                         <span>
                             <h2>Platnom karticom</h2>
@@ -43,15 +47,16 @@ const Dostava = () => {
                                 Za informativni prikaz cena u drugim valutama koristi se srednji kurs Narodne Banke Srbije. Iznos za koji će biti zadužena Vaša platna kartica biće izražen u Vašoj lokalnoj valuti kroz konverziju u istu po kursu koji koriste kartičarske organizacije, a koji nama u trenutku transakcije ne može biti poznat. Kao rezultat ove konverzije postoji mogućnost neznatne razlike od originalne cene navedene na našem sajtu.</p>
                         </span>
                     </SmallBox>
-                    <BigBox>
-                    <img src='https://i.ibb.co/4KpxFnD/ips-skeniraj-removebg-preview.png' />
-                        <span>
-                            <h2>IPS Skeniraj</h2>
-                            <p>Svoju online porudžbinu možete platiti instant plaćanjem, metodom IPS skeniraj.</p>
-                            <p>Kada izaberete IPS skeniraj bićete preusmereni na stranicu na kojoj će Vam biti prikazan jednokratan IPS QR kod koji je obezbedila Raiffeisen banka.</p>
-                            <p>Aplikacijom mobilnog bankarstva (Mbanking aplikacijom) koju imate instaliranu na svom mobilnom uređaju skeniraćete/preuzećete podatke iz generisanog IPS QR koda i plaćanje obavljate jednostavno, u sigurnom okruženju Vaše banke.</p>
-                            <p>Informacija o ishodu plaćanja biće Vam prikazana odmah po završetku obrade ali će Vam biti dostavljena i putem imejla.</p>
-                        </span>
+                    <BigBox onClick={() => {setSelectedDos('IPS')}}>
+                        {selectedDos === 'IPS' ? <Circle color='red' /> : ''}
+                        <img src='https://i.ibb.co/4KpxFnD/ips-skeniraj-removebg-preview.png' />
+                            <span>
+                                <h2>IPS Skeniraj</h2>
+                                <p>Svoju online porudžbinu možete platiti instant plaćanjem, metodom IPS skeniraj.</p>
+                                <p>Kada izaberete IPS skeniraj bićete preusmereni na stranicu na kojoj će Vam biti prikazan jednokratan IPS QR kod koji je obezbedila Raiffeisen banka.</p>
+                                <p>Aplikacijom mobilnog bankarstva (Mbanking aplikacijom) koju imate instaliranu na svom mobilnom uređaju skeniraćete/preuzećete podatke iz generisanog IPS QR koda i plaćanje obavljate jednostavno, u sigurnom okruženju Vaše banke.</p>
+                                <p>Informacija o ishodu plaćanja biće Vam prikazana odmah po završetku obrade ali će Vam biti dostavljena i putem imejla.</p>
+                            </span>
                     </BigBox>
                 </Flex>
             </Box>
@@ -98,6 +103,11 @@ const Pitanje = styled.div`
         }
     }
 `
+const Circle = styled(FaDotCircle)`
+    position:absolute;
+    left: 1rem;
+    top:1rem;
+`
 const Box = styled.div`
     width: 100%;
     height: 65vh;
@@ -110,6 +120,7 @@ const Box = styled.div`
     }
 `
 const SmallBox = styled.div`
+    position:relative;
     width: 100%;
     height: 40%;
     display:flex;
@@ -151,6 +162,7 @@ const BigBox = styled.div`
     justify-content:center;
     align-items:center;
     cursor:pointer;
+    position:relative;
     img{
         width: 150px;
         margin-left: 1rem;
