@@ -116,7 +116,7 @@ const AllBooks = () => {
                       </TypeDiv>
                     </SortingLeft>
                     <Content>
-                       {currentItems.map((book, index) => (
+                       {/* {currentItems.map((book, index) => (
                             <Card key={index}>
                                 <img src={book.img} />
                                 <Circle>
@@ -132,8 +132,8 @@ const AllBooks = () => {
                                     <Dodaj onClick={() => dispatch((addItemToCart(book)))} ><AiOutlineShoppingCart/></Dodaj>
                                 </HoverDiv>
                             </Card>
-                        )) }
-                        {/* {filteredBooks.map((book, index) => (
+                        )) } */}
+                        {filteredBooks.map((book, index) => (
                           <Card key={index}>
                           <img src={book.img} />
                           <Circle>
@@ -149,7 +149,7 @@ const AllBooks = () => {
                               <Dodaj onClick={() => dispatch((addItemToCart(book)))} ><AiOutlineShoppingCart/></Dodaj>
                           </HoverDiv>
                       </Card>
-                          ))} */}
+                          ))}
                         
                          
                           

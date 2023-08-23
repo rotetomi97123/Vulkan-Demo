@@ -108,7 +108,7 @@ const Btn = styled.button`
 }
 `
 const PotvrdiBox = styled.div`
-  width:100%;
+  width: 80%;
   height: 30vh;
   display:flex;
   flex-direction:column;
@@ -173,7 +173,7 @@ const CheckboxContainer = styled.label`
   position: relative;
   padding-left: 25px;
   cursor: pointer;
-  font-size: 16px;
+  font-size: 0.9rem;
   user-select: none;
   display:flex;
   justify-content:flex-start;
@@ -183,6 +183,8 @@ const CheckboxContainer = styled.label`
   @media (max-width: 700px) {
     font-size:0.9rem;
     justify-content:center;
+    width: 250px;
+    flex-direction:column;
   }
 `;
 export default Ukupno
