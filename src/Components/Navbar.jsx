@@ -150,7 +150,7 @@ const Navbar = () => {
                     <Link to='/'><img src='https://www.knjizare-vulkan.rs/files/images/vulkan/logo.png.webp' /></Link> 
                 </div>
                 <span>
-                    <Heart>
+                    <Heart onClick={() => (setFavouriteShow(prev => !prev))}>
                         <AiOutlineHeart size={20} />
                         <p>{favourites.length}</p>
                     </Heart>
@@ -270,6 +270,11 @@ const FavouriteDiv = styled.div`
     z-index: 100;
     border-radius: 0.5rem;
     background: white;
+    @media (max-width: 750px){
+        width: 250px;
+        top: 7vh;
+        right: 0;
+    }
 `
 const FavouriteBox = styled.div`
     display:flex;
