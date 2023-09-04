@@ -1,16 +1,20 @@
 import React, { useEffect, useRef, useState } from 'react'
 import styled from 'styled-components'
 import {BiLogIn,BiSearchAlt2,BiMenu} from 'react-icons/Bi'
-import {AiOutlineHeart,AiOutlineQuestionCircle} from 'react-icons/ai'
+import {AiOutlineHeart,AiOutlineQuestionCircle,AiOutlineShoppingCart} from 'react-icons/ai'
 import {BsFillCartFill,BsHouseFill} from 'react-icons/bs'
 import {MdDiscount} from 'react-icons/md'
 import {TbDiscount} from 'react-icons/tb'
 import {GrNext} from 'react-icons/gr'
 import { Link } from 'react-router-dom'
 import { useSelector, useDispatch } from 'react-redux'
-
+import { addItemToCart , clearFavouriteCart} from '../Actions'
 
 const Navbar = () => {
+
+    const dispatch = useDispatch();
+    const [favouriteShow, setFavouriteShow] = useState(false)
+
     const [kategorije, setKategorije] = useState(false);
     const [isMouseOver,setMouseOver] = useState(false);
 
@@ -19,7 +23,8 @@ const Navbar = () => {
     const [mobileKateg,setMobileKateg] = useState(false)
 
     const cartItems = useSelector(state => state.cart.cartItems)
-//
+    const favourites = useSelector(state => state.favourite.favouriteItems);
+    //
     const [tooltipVisible, setTooltipVisible] = useState(false);
     const closingTimeoutRef = useRef(null);
 
@@ -72,6 +77,7 @@ const Navbar = () => {
         };
       }, [mobileMenu]);
       
+    
   return (
     <Nav>
         <TopNav>
@@ -83,9 +89,9 @@ const Navbar = () => {
                         <Prijav>Prijavite se</Prijav>
                     </span>
                     <p>Registrujte se</p>
-                    <Heart>
+                    <Heart onClick={() => (setFavouriteShow(prev => !prev))}>
                         <AiOutlineHeart size={20} />
-                        <p>0</p>
+                        <p>{favourites.length}</p>
                     </Heart>
                     <Link to='/kupovina'>
                         <Cart>
@@ -119,10 +125,9 @@ const Navbar = () => {
             <p   onMouseEnter={handleMouseEnterButton}
         onMouseLeave={handleMouseLeaveButton}>KATEGORIJE</p>
             <Link to='/Akcija'><p>AKCIJE</p></Link>
-            <p>NOVA IZDANJA</p>
-            <p>#BOOKTOK</p>
-            <p>HARRY POTTER</p>
-            <p>USKORO</p>
+            <Link to='/NovaIzdanja'><p>NOVA IZDANJA</p></Link>
+            <Link to='/BookTok'><p>#BOOKTOK</p></Link>
+            <Link to='/HarryPotter'><h4>HARRY POTTER</h4></Link>
             <SearchContainer>
                 <SearchInput type="text" placeholder="Pretraži sajt" />
                 <SearchButton type="button"><BiSearchAlt2 size={25}/></SearchButton>
@@ -130,7 +135,7 @@ const Navbar = () => {
             {tooltipVisible  && <Kategorije  className="tooltip"
           onMouseEnter={handleMouseEnterTooltip}
           onMouseLeave={handleMouseLeaveTooltip}>
-                <p>KNJIGE</p>
+                <Link to='/Allbooks'><p>KNJIGA</p></Link>
                 <p>ZA DECU</p>
                 <p>ENGLISH BOOKS</p>
                 <p>GIFT</p>
@@ -147,7 +152,7 @@ const Navbar = () => {
                 <span>
                     <Heart>
                         <AiOutlineHeart size={20} />
-                        <p>0</p>
+                        <p>{favourites.length}</p>
                     </Heart>
                     <Link to='/kupovina'>
                         <CartMobile>
@@ -164,10 +169,9 @@ const Navbar = () => {
                     <Arrow />
                 </span>
                 <Link to='/Akcija'><p>AKCIJE</p></Link>
-                <p>NOVA IZDANJA</p>
-                <p>#BOOKTOK</p>
-                <p>HARRY POTTER</p>
-                <p>USKORO</p>
+                <Link to='/NovaIzdanja'><p>NOVA IZDANJA</p></Link>
+                <Link to='/BookTok'><p>#BOOKTOK</p></Link>
+                <Link to='/HarryPotter'><h4>HARRY POTTER</h4></Link>
             </MobileMenu>}
             {mobileKateg &&<MobileKategorija>
                 <p>KNJIGE</p>
@@ -177,6 +181,27 @@ const Navbar = () => {
                 <p>PARTY PROGRAM</p>
             </MobileKategorija>}
         </MobileNav>}
+        {favouriteShow &&<FavouriteDiv>
+            <Position>
+            {favourites.length === 0 ? <p>Vaša lista želja je prazna</p> : <>
+            <h2>Lišta želja</h2>
+                {favourites.map((item,index) =>{
+                    return(
+                        <FavouriteBox key={index}>
+                            <img src={item.img} />
+                            <span>
+                                <p>{item.name}</p>
+                                <h2>{item.price} RSD</h2>
+                                <h3>{item.realPrice}RSD</h3>
+                            <Dodaj onClick={() => dispatch(addItemToCart(item))}><AiOutlineShoppingCart/></Dodaj>
+                            </span>
+                        </FavouriteBox>
+                    )
+                })}
+            <ClearButton onClick={() => dispatch(clearFavouriteCart())}>Clear</ClearButton>
+            </>}
+            </Position>
+        </FavouriteDiv>}
 
     </Nav>
   )
@@ -186,6 +211,98 @@ display:flex;
     width:100%;
     flex-direction:column;
     `
+const Position = styled.div`
+    width: 100%;
+    height: 100%;
+    position:relative;
+    margin-bottom: 3rem;
+    h2{
+        text-align:center;
+        font-size: 1.2rem;
+        font-weight:500;
+        margin-top: 0.2rem;
+    }
+    p{
+        text-align:center;
+        font-size: 1.2rem;
+    }
+`
+const ClearButton = styled.button`
+    position: absolute;
+    bottom: -2rem;
+    right: 0.5rem;
+    width: 60px;
+    height: 25px;
+    font-size: 1rem;
+    border: 1px solid black;
+    background: none;
+    cursor: pointer;
+    &:hover{
+        color:white;
+        background: black;
+        transition: 0.3s ease;
+    }
+`
+const Dodaj = styled.button`
+  color:white;
+  cursor:pointer;
+  width:40px;
+  height:40px;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  border:none;
+  font-size: 1.4rem;
+  background:black;
+  border-radius:50%;
+  &:hover{
+    background:red;
+    transition:0.3s ease;
+  }
+`
+const FavouriteDiv = styled.div`
+    position: absolute;
+    width: 300px;
+    height: auto;
+    border: 1px solid black;
+    right:  7.5rem;
+    top: 4vh;
+    z-index: 100;
+    border-radius: 0.5rem;
+    background: white;
+`
+const FavouriteBox = styled.div`
+    display:flex;
+    padding: 0.5rem;
+    img{
+        width: 100px;
+    }
+    span{
+        width: 100%;
+        display:flex;
+        justify-content:center;
+        flex-direction:column;
+        align-items:center;
+    }
+    p{
+        font-size: 0.8rem;
+        text-align:center;
+      }
+      h2{
+        font-size: 1rem;
+        color:red;
+        text-align:center;
+        margin-top:1rem;
+    }
+    h3{
+        margin-bottom: 0.5rem;
+        font-size:1rem;
+        color:grey;
+        text-align:center;
+        text-decoration: line-through;
+        font-weight:400;
+      }
+`
 const Flex = styled.div`
 display:flex;
     justify-content: space-between;
@@ -274,6 +391,7 @@ const MobileMenu = styled.div`
     justify-content:flex-start;
     align-items:flex-start;
     padding-top:2rem;
+    
     a{
         text-decoration:none;
         list-style-type:none;
@@ -298,6 +416,15 @@ const MobileMenu = styled.div`
             font-size: 0.9rem;
         }
     }
+    h4{
+        color:red;
+        font-weight:bold;
+        font-family: 'Cinzel Decorative', sans-serif;
+        margin: 1.2rem 1rem;
+        &:hover{
+            color:black;
+            transition:0.4s ease;
+        }
     @media (max-width: 500px){
         top:5.5rem;
     }
@@ -339,6 +466,16 @@ const RealNav = styled.div`
     a{
         text-decoration:none;
         list-style-type:none;
+    }
+    h4{
+        color:red;
+        font-weight:bold;
+        font-family: 'Cinzel Decorative', sans-serif;
+        margin: 0 2rem;
+        &:hover{
+            color:black;
+            transition:0.4s ease;
+        }
     }
     p{
         margin: 0 2rem;

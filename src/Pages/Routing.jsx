@@ -5,6 +5,9 @@ import Detaljnije from './Detaljnije'
 import Korpa from './Korpa'
 import Akcija from './Akcija'
 import AllBooks from './AllBooks'
+import NovaIzdanja from './NovaIzdanja'
+import BookTok from './BookTok'
+import HarryPotter from './HarryPotter'
 
 const Routing = () => {
   return (
@@ -14,6 +17,9 @@ const Routing = () => {
         <Route path='/kupovina' element={<Korpa />} />
         <Route path='/Akcija' element={<Akcija />} />
         <Route path='/Allbooks' element={<AllBooks />} />
+        <Route path='/NovaIzdanja' element={<NovaIzdanja />} />
+        <Route path='/BookTok' element={<BookTok />} />
+        <Route path='/HarryPotter' element={<HarryPotter />} />
     </Routes>
   )
 }

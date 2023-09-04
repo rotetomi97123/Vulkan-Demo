@@ -38,7 +38,8 @@ export const Novo = [
         popust: 10,
         booktok: false,
         type: 'ROMAN',
-        quantity: 1
+        quantity: 1,
+        favourite: false
     },
     {
         id:2,
@@ -51,7 +52,8 @@ export const Novo = [
         popust: 15,
         booktok: true,
         type: 'LJUBAVNI ROMAN',
-        quantity: 1
+        quantity: 1,
+        favourite: false
     },
     {
         id:3,
@@ -64,7 +66,8 @@ export const Novo = [
         popust: 10,
         booktok: false,
         type: 'LJUBAVNI ROMAN',
-        quantity: 1
+        quantity: 1,
+        favourite: false
     },
     {
         id:4,
@@ -77,7 +80,8 @@ export const Novo = [
         popust: 15,
         booktok: false,
         type: 'ROMAN',
-        quantity: 1
+        quantity: 1,
+        favourite: false
     },
     {
         id:5,
@@ -89,8 +93,9 @@ export const Novo = [
         izdavac: 'BOOKA',
         popust: 10,
         booktok: false,
-        type: 'ROMAN',
-        quantity: 1
+        type: 'LJUBAVNI ROMAN ',
+        quantity: 1,
+        favourite: false
     },
     {
         id:6,
@@ -102,8 +107,9 @@ export const Novo = [
         izdavac: 'GEOPOETIKA',
         popust: 5,
         booktok: false,
-        type: 'ROMAN',
-        quantity: 1
+        type: 'LJUBAVNI ROMAN ',
+        quantity: 1,
+        favourite: false
     },
     {
         id:7,
@@ -116,7 +122,8 @@ export const Novo = [
         popust: 15,
         booktok: false,
         type: 'LJUBAVNI ROMAN',
-        quantity: 1
+        quantity: 1,
+        favourite: false
     },
     {
         id:8,
@@ -129,7 +136,8 @@ export const Novo = [
         popust: 15,
         booktok: false,
         type: 'DOMAĆI ROMAN',
-        quantity: 1
+        quantity: 1,
+        favourite: false
     },
     {
         id:9,
@@ -141,8 +149,9 @@ export const Novo = [
         izdavac: 'LAGUNA',
         popust: 10,
         booktok: false,
-        type: 'ROMAN',
-        quantity: 1
+        type: 'LJUBAVNI ROMAN ',
+        quantity: 1,
+        favourite: false
     }
 ]
 export const Top = [
@@ -157,7 +166,8 @@ export const Top = [
         popust: 15,
         booktok: false,
         type: 'TRILERI/MISTERIJE',
-        quantity: 1
+        quantity: 1,
+        favourite: false
     },
     {
         id:2,
@@ -169,8 +179,9 @@ export const Top = [
         izdavac: 'VULKAN IZDAVAŠTVO',
         popust: 15,
         booktok: true,
-        type: 'ROMAN',
-        quantity: 1
+        type: 'LJUBAVNI ROMAN ',
+        quantity: 1,
+        favourite: false
     },
     {
         id:3,
@@ -183,7 +194,8 @@ export const Top = [
         popust: 10,
         booktok: false,
         type: 'SAVETI ZA KARIJERU I POSTIZANJE USPEHA',
-        quantity: 1
+        quantity: 1,
+        favourite: false
     },
     {
         id:4,
@@ -196,7 +208,8 @@ export const Top = [
         popust: 10,
         booktok: false,
         type: 'DOMAĆI LJUBAVNI ROMAN',
-        quantity: 1
+        quantity: 1,
+        favourite: false
     },
     {
         id:5,
@@ -209,7 +222,8 @@ export const Top = [
         popust: 10,
         booktok: false,
         type: 'DOMAĆI LJUBAVNI ROMAN',
-        quantity: 1
+        quantity: 1,
+        favourite: false
     },
     {
         id:6,
@@ -222,7 +236,8 @@ export const Top = [
         popust: 10,
         booktok: false,
         type: 'DOMAĆI ROMAN',
-        quantity: 1
+        quantity: 1,
+        favourite: false
     },
     {
         id:7,
@@ -235,7 +250,8 @@ export const Top = [
         popust: 10,
         booktok: false,
         type: 'SAVETI ZA KARIJERU I POSTIZANJE USPEHA',
-        quantity: 1
+        quantity: 1,
+        favourite: false
     },
     {
         id:8,
@@ -248,7 +264,8 @@ export const Top = [
         popust: 15,
         booktok: false,
         type: 'LJUBAVNI ROMAN',
-        quantity: 1
+        quantity: 1,
+        favourite: false
     },
     {
         id:9,
@@ -261,7 +278,8 @@ export const Top = [
         popust: 15,
         booktok: true,
         type: 'LJUBAVNI ROMAN',
-        quantity: 1
+        quantity: 1,
+        favourite: false
     }
 ]
 export const TopEng = [
@@ -276,7 +294,8 @@ export const TopEng = [
         popust: 15,
         booktok: true,
         type: 'CONTEMPORARY FICTION',
-        quantity: 1
+        quantity: 1,
+        favourite: false
     },
     {
         id:2,
@@ -289,7 +308,8 @@ export const TopEng = [
         popust: 15,
         booktok: true,
         type: 'CRIME, THRILLERS & MYSTERY',
-        quantity: 1
+        quantity: 1,
+        favourite: false
     },
     {
         id:3,
@@ -302,7 +322,8 @@ export const TopEng = [
         popust: 15,
         booktok: true,
         type: 'CONTEMPORARY FICTION',
-        quantity: 1
+        quantity: 1,
+        favourite: false
     },
     {
         id:4,
@@ -315,7 +336,8 @@ export const TopEng = [
         popust: 15,
         booktok: true,
         type: 'YOUNG ADULT LITERATURE & FICTION',
-        quantity: 1
+        quantity: 1,
+        favourite: false
     },
     {
         id:5,
@@ -328,7 +350,8 @@ export const TopEng = [
         popust: 15,
         booktok: false,
         type: 'FASHION',
-        quantity: 1
+        quantity: 1,
+        favourite: false
     },
     {
         id:6,
@@ -341,7 +364,8 @@ export const TopEng = [
         popust: 15,
         booktok: false,
         type: 'CONTEMPORARY FICTION',
-        quantity: 1
+        quantity: 1,
+        favourite: false
     },
     {
         id:7,
@@ -354,7 +378,8 @@ export const TopEng = [
         popust: 15,
         booktok: false,
         type: 'PSIHOLOGY',
-        quantity: 1
+        quantity: 1,
+        favourite: false
     },
     {
         id:8,
@@ -367,7 +392,8 @@ export const TopEng = [
         popust: 15,
         booktok: false,
         type: 'FANTASY',
-        quantity: 1
+        quantity: 1,
+        favourite: false
     },
     {
         id:9,
@@ -380,7 +406,8 @@ export const TopEng = [
         popust: 15,
         booktok: false,
         type: 'POETRY',
-        quantity: 1
+        quantity: 1,
+        favourite: false
     }
 ]
 export const Stephen = [
@@ -395,7 +422,8 @@ export const Stephen = [
         popust: 15,
         booktok: false,
         type: 'CRIME, THRILLERS & MYSTERY',
-        quantity: 1
+        quantity: 1,
+        favourite: false
     },
     {
         id:2,
@@ -408,7 +436,8 @@ export const Stephen = [
         popust: 15,
         booktok: false,
         type: 'CRIME, THRILLERS & MYSTERY',
-        quantity: 1
+        quantity: 1,
+        favourite: false
     },
     {
         id:3,
@@ -421,7 +450,8 @@ export const Stephen = [
         popust: 15,
         booktok: false,
         type: 'CRIME, THRILLERS & MYSTERY',
-        quantity: 1
+        quantity: 1,
+        favourite: false
     },
     {
         id:4,
@@ -434,7 +464,8 @@ export const Stephen = [
         popust: 15,
         booktok: false,
         type: 'CRIME, THRILLERS & MYSTERY',
-        quantity: 1
+        quantity: 1,
+        favourite: false
     },
     {
         id:5,
@@ -447,7 +478,8 @@ export const Stephen = [
         popust: 15,
         booktok: false,
         type: 'CRIME, THRILLERS & MYSTERY',
-        quantity: 1
+        quantity: 1,
+        favourite: false
     },
     {
         id:6,
@@ -460,7 +492,8 @@ export const Stephen = [
         popust: 15,
         booktok: false,
         type: 'CRIME, THRILLERS & MYSTERY',
-        quantity: 1
+        quantity: 1,
+        favourite: false
     },
     {
         id:7,
@@ -473,7 +506,8 @@ export const Stephen = [
         popust: 15,
         booktok: false,
         type: 'CRIME, THRILLERS & MYSTERY',
-        quantity: 1
+        quantity: 1,
+        favourite: false
     },
     {
         id:8,
@@ -486,7 +520,8 @@ export const Stephen = [
         popust: 15,
         booktok: false,
         type: 'CRIME, THRILLERS & MYSTERY',
-        quantity: 1
+        quantity: 1,
+        favourite: false
     },
     {
         id:9,
@@ -499,7 +534,8 @@ export const Stephen = [
         popust: 15,
         booktok: false,
         type: 'CRIME, THRILLERS & MYSTERY',
-        quantity: 1
+        quantity: 1,
+        favourite: false
     }
 ]
 export const do40 = [
@@ -514,7 +550,8 @@ export const do40 = [
         popust: 40,
         booktok: false,
         type: 'ROMAN',
-        quantity: 1
+        quantity: 1,
+        favourite: false
     },
     {
         id:2,
@@ -527,7 +564,8 @@ export const do40 = [
         popust: 40,
         booktok: false,
         type: 'ROMAN',
-        quantity: 1
+        quantity: 1,
+        favourite: false
     },
     {
         id:3,
@@ -540,7 +578,8 @@ export const do40 = [
         popust: 40,
         booktok: false,
         type: 'ROMAN',
-        quantity: 1
+        quantity: 1,
+        favourite: false
     },
     {
         id:4,
@@ -553,7 +592,8 @@ export const do40 = [
         popust: 40,
         booktok: false,
         type: 'LJUBAVNI ROMAN',
-        quantity: 1
+        quantity: 1,
+        favourite: false
     },
     {
         id:5,
@@ -566,7 +606,8 @@ export const do40 = [
         popust: 40,
         booktok: false,
         type: 'LJUBAVNI ROMAN',
-        quantity: 1
+        quantity: 1,
+        favourite: false
     },
     {
         id:6,
@@ -579,7 +620,8 @@ export const do40 = [
         popust: 40,
         booktok: true,
         type: 'FANTASTIKA',
-        quantity: 1
+        quantity: 1,
+        favourite: false
     },
     {
         id:7,
@@ -592,7 +634,8 @@ export const do40 = [
         popust: 25,
         booktok: false,
         type: 'FANTASTIKA',
-        quantity: 1
+        quantity: 1,
+        favourite: false
     },
     {
         id:8,
@@ -605,7 +648,8 @@ export const do40 = [
         popust: 25,
         booktok: false,
         type: 'FANTASTIKA',
-        quantity: 1
+        quantity: 1,
+        favourite: false
     },
     {
         id:9,
@@ -618,7 +662,8 @@ export const do40 = [
         popust: 40,
         booktok: true,
         type: 'FANTASTIKA',
-        quantity: 1
+        quantity: 1,
+        favourite: false
     }
 ]
 export const Popularna = [
@@ -633,7 +678,8 @@ export const Popularna = [
         popust: 50,
         booktok: false,
         type: 'TINEJDŽ I YA ROMAN',
-        quantity: 1
+        quantity: 1,
+        favourite: false
     },
     {
         id: 2,
@@ -646,7 +692,8 @@ export const Popularna = [
         popust: 50,
         booktok: true,
         type: 'TINEJDŽ I YA ROMAN',
-        quantity: 1
+        quantity: 1,
+        favourite: false
     },
     {
         id: 3,
@@ -659,7 +706,8 @@ export const Popularna = [
         popust: 50,
         booktok: false,
         type: 'TINEJDŽ I YA ROMAN',
-        quantity: 1
+        quantity: 1,
+        favourite: false
     },    
     {
         id: 4,
@@ -672,7 +720,8 @@ export const Popularna = [
         popust: 50,
         booktok: false,
         type: 'TINEJDŽ I YA ROMAN',
-        quantity: 1
+        quantity: 1,
+        favourite: false
     },
     {
         id: 5,
@@ -685,7 +734,8 @@ export const Popularna = [
         popust: 50,
         booktok: false,
         type: 'TINEJDŽ I YA ROMAN',
-        quantity: 1
+        quantity: 1,
+        favourite: false
     },
     {
         id: 6,
@@ -698,7 +748,8 @@ export const Popularna = [
         popust: 50,
         booktok: false,
         type: 'TINEJDŽ I YA ROMAN',
-        quantity: 1
+        quantity: 1,
+        favourite: false
     },
     {
         id: 7,
@@ -711,7 +762,8 @@ export const Popularna = [
         popust: 50,
         booktok: false,
         type: 'TINEJDŽ I YA ROMAN',
-        quantity: 1
+        quantity: 1,
+        favourite: false
     },
     {
         id: 8,
@@ -724,7 +776,8 @@ export const Popularna = [
         popust: 50,
         booktok: false,
         type: 'TINEJDŽ I YA ROMAN',
-        quantity: 1
+        quantity: 1,
+        favourite: false
     },
     {
         id: 9,
@@ -737,7 +790,8 @@ export const Popularna = [
         popust: 50,
         booktok: false,
         type: 'TINEJDŽ I YA ROMAN',
-        quantity: 1
+        quantity: 1,
+        favourite: false
     }
 ]
 export const Za500 = [
@@ -752,7 +806,8 @@ export const Za500 = [
         popust: 44,
         booktok: false,
         type: 'ASERTIVNOST, MOTIVACIJA I SAMOPOŠTOVANJE',
-        quantity: 1
+        quantity: 1,
+        favourite: false
     },
     {
         id: 2,
@@ -765,7 +820,8 @@ export const Za500 = [
         popust: 50,
         booktok: false,
         type: 'ROMAN',
-        quantity: 1
+        quantity: 1,
+        favourite: false
     },
     {
         id: 3,
@@ -778,7 +834,8 @@ export const Za500 = [
         popust: 50,
         booktok: false,
         type: 'ROMAN',
-        quantity: 1
+        quantity: 1,
+        favourite: false
     },    
     {
         id: 4,
@@ -791,7 +848,8 @@ export const Za500 = [
         popust: 44,
         booktok: false,
         type: 'ROMAN',
-        quantity: 1
+        quantity: 1,
+        favourite: false
     },
     {
         id: 5,
@@ -804,7 +862,8 @@ export const Za500 = [
         popust: 44,
         booktok: false,
         type: 'ROMAN',
-        quantity: 1
+        quantity: 1,
+        favourite: false
     },
     {
         id: 6,
@@ -817,7 +876,8 @@ export const Za500 = [
         popust: 50,
         booktok: false,
         type: 'ROMAN',
-        quantity: 1
+        quantity: 1,
+        favourite: false
     },
     {
         id: 7,
@@ -830,7 +890,8 @@ export const Za500 = [
         popust: 44,
         booktok: false,
         type: 'ROMAN',
-        quantity: 1
+        quantity: 1,
+        favourite: false
     },
     {
         id: 8,
@@ -843,7 +904,8 @@ export const Za500 = [
         popust: 50,
         booktok: false,
         type: 'LJUBAVNI ROMAN',
-        quantity: 1
+        quantity: 1,
+        favourite: false
     },
     {
         id: 9,
@@ -856,7 +918,690 @@ export const Za500 = [
         popust: 50,
         booktok: false,
         type: 'LJUBAVNI ROMAN',
+        quantity: 1,
+        favourite: false
+    }
+]
+export const NovoIzdBooks = [
+    {
+        id:1,
+        name: 'ARISTOTEL I DANTE Uranjaju u vode sveta TikTok Hit',
+        price: 1079,
+        realPrice: 1199,
+        img: 'https://www.knjizare-vulkan.rs/files/images/slike_proizvoda/380758.jpg',
+        autor: 'Bendžamin Alire Saenz',
+        izdavac: 'PUBLIK PRAKTIKUM',
+        popust: 10,
+        booktok: true,
+        type: 'TINEJDŽ I YA ROMAN',
+        quantity: 1,
+        favourite: false
+    },
+    {
+        id: 2,
+        name: 'TAJNA FORMULA STVARANJA',
+        price: 799,
+        realPrice: 719,
+        img: 'https://www.knjizare-vulkan.rs/files/thumbs/files/watermark/files/images/slike_proizvoda/thumbs_w/thumbs_1200/380757_w_1200_1200px.jpg.webp',
+        autor: 'Ostin Kleon',
+        izdavac: 'HARMONIJA KNJIGE',
+        popust: 10,
+        booktok: false,
+        type: 'ASERTIVNOST, MOTIVACIJA I SAMOPOŠTOVANJE',
+        quantity: 1,
+        favourite: false
+    },
+    {
+        id: 3,
+        name: 'ŽUTE OČI KROKODILA',
+        price: 1079,
+        realPrice: 1199,
+        img: 'https://www.knjizare-vulkan.rs/files/thumbs/files/watermark/files/images/slike_proizvoda/thumbs_w/thumbs_1200/380756_w_1200_1200px.jpg.webp',
+        autor: 'Katrin Pankol',
+        izdavac: 'STELA KNJIGE',
+        popust: 10,
+        booktok: false,
+        type: 'CHICK LIT - ROMANTIČNA KOMEDIJA',
+        quantity: 1,
+        favourite: false
+    },    
+    {
+        id: 4,
+        name: 'ZAKUCAVANJE ZA VEČNOST: MAJKL DŽORDAN I SVET KOJI JE STVORIO',
+        price: 1189,
+        realPrice: 1399,
+        img: 'https://www.vulkani.rs/files/images/slike_proizvoda/26380.jpg',
+        autor: 'Dejvid Halberstam',
+        izdavac: 'VULKAN IZDAVAŠTVO',
+        popust: 15,
+        booktok: false,
+        type: 'BIOGRAFIJE, MEMOARI, DNEVNICI, PISMA',
+        quantity: 1,
+        favourite: false
+    },
+    {
+        id: 5,
+        name: 'NA SIGURNOM MESTU',
+        price: 934,
+        realPrice: 1099,
+        img: 'https://www.vulkani.rs/files/images/slike_proizvoda/26983.jpg',
+        autor: 'Volas Stegner',
+        izdavac: 'VULKAN IZDAVAŠTVO',
+        popust: 15,
+        booktok: false,
+        type: 'ROMAN',
+        quantity: 1,
+        favourite: false
+    },
+    {
+        id: 6,
+        name: 'VESELI BROD',
+        price: 594,
+        realPrice: 699,
+        img: 'https://www.vulkani.rs/files/thumbs/files/images/slike_proizvoda/thumbs_1200/29168_1200_1200px.jpg',
+        autor: 'Slobodan Stanišić',
+        izdavac: 'VULKAN IZDAVAŠTVO',
+        popust: 15,
+        booktok: false,
+        type: 'ROMAN',
+        quantity: 1,
+        favourite: false
+    },
+    {
+        id: 7,
+        name: 'OJAČAJ SAMOPOUZDANJE',
+        price: 809,
+        realPrice: 899,
+        img: 'https://www.knjizare-vulkan.rs/files/watermark/files/images/slike_proizvoda/thumbs_w/380686_w.jpg',
+        autor: 'Štefani Štal',
+        izdavac: 'LAGUNA',
+        popust: 10,
+        booktok: false,
+        type: 'ROMAN',
+        quantity: 1,
+        favourite: false
+    },
+    {
+        id: 8,
+        name: 'APSOLUTNA ISTINA',
+        price: 1619,
+        realPrice: 1799,
+        img: 'https://www.delfi.rs/_img/artikli/2023/08/apsolutna_istina_vv.jpg',
+        autor: 'Majk Tajson',
+        izdavac: 'LAGUNA',
+        popust: 10,
+        booktok: false,
+        type: 'BIOGRAFIJE, MEMOARI, DNEVNICI, PISMA',
+        quantity: 1,
+        favourite: false
+    },
+    {
+        id: 9,
+        name: 'MALIBU U PLAMENU TikTok Hit',
+        price: 1079,
+        realPrice: 1199,
+        img: 'https://www.knjizare-vulkan.rs/files/thumbs/files/watermark/files/images/slike_proizvoda/thumbs_w/thumbs_1200/380680_w_1200_1200px.jpg.webp',
+        autor: 'Tejlor Dženkins Rid',
+        izdavac: 'LAGUNA',
+        popust: 10,
+        booktok: true,
+        type: 'ROMAN',
+        quantity: 1,
+        favourite: false
+    }
+]
+export const TiktokHit1 = [
+    {
+        id:1,
+        name: 'DVOR SREBRNIH PLAMENOVA TikTok Hit',
+        price: 1187,
+        realPrice: 1318,
+        img: 'https://www.knjizare-vulkan.rs/files/watermark/files/images/slike_proizvoda/thumbs_w/380095_w.jpg',
+        autor: 'Sara Dž. Mas',
+        izdavac: 'URBAN READS',
+        popust: 10,
+        booktok: true,
+        type: 'TINEJDŽ I YA ROMAN',
+        quantity: 1,
+        favourite: false
+    },
+    {
+        id: 2,
+        name: 'DVOR KRILA I PROPASTI TikTok Hit',
+        price: 1169,
+        realPrice: 1299,
+        img: 'https://www.knjizare-vulkan.rs/files/images/slike_proizvoda/371259.jpg',
+        autor: 'Sara Dž. Mas',
+        izdavac: 'URBAN READS',
+        popust: 10,
+        booktok: true,
+        type: 'TINEJDŽ I YA ROMAN',
+        quantity: 1,
+        favourite: false
+    },
+    {
+        id: 3,
+        name: 'DVOR MAGLE I SRDŽBE TikTok Hit',
+        price: 1079,
+        realPrice: 1199,
+        img: 'https://www.knjizare-vulkan.rs/files/images/slike_proizvoda/368263.jpg',
+        autor: 'Sara Dž. Mas',
+        izdavac: 'URBAN READS',
+        popust: 10,
+        booktok: true,
+        type: 'TINEJDŽ I YA ROMAN',
+        quantity: 1,
+        favourite: false
+    },    
+    {
+        id: 4,
+        name: 'ARISTOTEL I DANTE Uranjaju u vode sveta TikTok Hit        ',
+        price: 1079,
+        realPrice: 1199,
+        img: 'https://www.knjizare-vulkan.rs/files/images/slike_proizvoda/380758.jpg',
+        autor: 'Bendžamin Alire Saenz',
+        izdavac: 'PUBLIK PRAKTIKUM',
+        popust: 10,
+        booktok: true,
+        type: 'TINEJDŽ I YA ROMAN',
+        quantity: 1,
+        favourite: false
+    },
+    {
+        id: 5,
+        name: 'ŠEST VRANA I DEO DUOLOGIJE TikTok Hit',
+        price: 1079,
+        realPrice: 1199,
+        img: 'https://www.knjizare-vulkan.rs/files/thumbs/files/watermark/files/images/slike_proizvoda/thumbs_w/thumbs_1200/294604_w_1200_1200px.jpg.webp',
+        autor: 'Li Bardugo',
+        izdavac: 'URBAN READS',
+        popust: 10,
+        booktok: true,
+        type: 'TINEJDŽ I YA ROMAN',
+        quantity: 1,
+        favourite: false
+    },
+    {
+        id: 6,
+        name: 'DVOR TRNJA I RUŽA TikTok hit',
+        price: 1079,
+        realPrice: 1199,
+        img: 'https://www.knjizare-vulkan.rs/files/thumbs/files/watermark/files/images/slike_proizvoda/thumbs_w/thumbs_1200/360496_w_1200_1200px.jpg.webp',
+        autor: 'Sara Dž. Mas',
+        izdavac: 'URBAN READS',
+        popust: 10,
+        booktok: true,
+        type: 'TINEJDŽ I YA ROMAN',
+        quantity: 1,
+        favourite: false
+    },
+    {
+        id: 7,
+        name: 'PODLI KRALJ TikTok Hit',
+        price: 989,
+        realPrice: 1099,
+        img: 'https://www.knjizare-vulkan.rs/files/watermark/files/images/slike_proizvoda/thumbs_w/359488_w.jpg',
+        autor: 'Holi Blek',
+        izdavac: 'PUBLIK PRAKTIKUM',
+        popust: 10,
+        booktok: true,
+        type: 'TINEJDŽ I YA ROMAN',
+        quantity: 1,
+        favourite: false
+    },
+    {
+        id: 8,
+        name: 'KRALJICA NIČEGA TikTok Hit',
+        price: 989,
+        realPrice: 1099,
+        img: 'https://www.knjizare-vulkan.rs/files/images/slike_proizvoda/364171.jpg',
+        autor: 'Holi Blek',
+        izdavac: 'PUBLIK PRAKTIKUM',
+        popust: 10,
+        booktok: true,
+        type: 'TINEJDŽ I YA ROMAN',
+        quantity: 1,
+        favourite: false
+    },
+    {
+        id: 9,
+        name: 'LETO KADA SAM POSTALA LEPA TikTok Hit',
+        price: 989,
+        realPrice: 1099,
+        img: 'https://www.knjizare-vulkan.rs/files/thumbs/files/watermark/files/images/slike_proizvoda/thumbs_w/thumbs_1200/369665_w_1200_1200px.jpg.webp',
+        autor: 'Dženi Han',
+        izdavac: 'URBAN READS',
+        popust: 10,
+        booktok: true,
+        type: 'TINEJDŽ I YA ROMAN',
+        quantity: 1,
+        favourite: false
+    }
+]
+export const TiktokHit2 = [
+    {
+        id:1,
+        name: 'MR WRONG NUMBER TikTok Hit',
+        price: 1355,
+        realPrice: 1595,
+        img: 'https://www.knjizare-vulkan.rs/files/watermark/files/images/slike_proizvoda/thumbs_w/366058_w.jpg',
+        autor: 'Lynn Painter',
+        izdavac: 'PENGUIN',
+        popust: 15,
+        booktok: true,
+        type: 'ROMANTIC COMEDY',
+        quantity: 1,
+        favourite: false
+    },
+    {
+        id: 2,
+        name: 'LOATHE TO LOVE YOU TikTok Hit',
+        price: 1215,
+        realPrice: 1430,
+        img: 'https://www.knjizare-vulkan.rs/files/images/slike_proizvoda/373502.jpg',
+        autor: 'Ali Hazelwood (Ali Hejzelvud)',
+        izdavac: 'LITTLE BROWN',
+        popust: 15,
+        booktok: true,
+        type: 'CONTEMPORARY FICTION',
+        quantity: 1,
+        favourite: false
+    },
+    {
+        id: 3,
+        name: 'HEART BONES TikTok Hit',
+        price: 2020,
+        realPrice: 2599,
+        img: 'https://www.knjizare-vulkan.rs/files/watermark/files/images/slike_proizvoda/thumbs_w/373503_w.jpg',
+        autor: 'Colleen Hoover (Kolin Huver)',
+        izdavac: 'SIMON&SHUSTER',
+        popust: 15,
+        booktok: true,
+        type: 'YOUNG ADULT LITERATURE & FICTION',
+        quantity: 1,
+        favourite: false
+    },    
+    {
+        id: 4,
+        name: 'THE UNHONEYMOONERS TikTok Hit',
+        price: 1309,
+        realPrice: 1540,
+        img: 'https://www.knjizare-vulkan.rs/files/watermark/files/images/slike_proizvoda/thumbs_w/365650_w.jpg',
+        autor: 'Christina Lauren (Kristina Loren)',
+        izdavac: 'LITTLE BROWN',
+        popust: 15,
+        booktok: true,
+        type: 'ROMANTIC COMEDY',
+        quantity: 1,
+        favourite: false
+    },
+    {
+        id: 5,
+        name: 'IT HAPPENED ONE SUMMER TikTok Hit',
+        price: 1355,
+        realPrice: 1595,
+        img: 'https://www.knjizare-vulkan.rs/files/thumbs/files/watermark/files/images/slike_proizvoda/thumbs_w/thumbs_1200/368555_w_1200_1200px.jpg.webp',
+        autor: 'Tessa Bailey',
+        izdavac: 'HARPERCOLLINS',
+        popust: 15,
+        booktok: true,
+        type: 'ROMANTIC COMEDY',
+        quantity: 1,
+        favourite: false
+    },
+    {
+        id: 6,
+        name: 'ALL THE BRIGHT PLACES TikTok Hit',
+        price: 1318,
+        realPrice: 1551,
+        img: 'https://www.knjizare-vulkan.rs/files/thumbs/files/watermark/files/images/slike_proizvoda/thumbs_w/thumbs_1200/283082_w_1200_1200px.jpg.webp',
+        autor: 'Jennifer Niven (Dženifer Niven)',
+        izdavac: 'PENGUIN',
+        popust: 15,
+        booktok: true,
+        type: 'YOUNG ADULT LITERATURE & FICTION',
+        quantity: 1,
+        favourite: false
+    },
+    {
+        id: 7,
+        name: 'DAISY JONES AND THE SIX TikTok Hit',
+        price: 1402,
+        realPrice: 1650,
+        img: 'https://www.knjizare-vulkan.rs/files/watermark/files/images/slike_proizvoda/thumbs_w/363844_w.jpg',
+        autor: 'Taylor Jenkins Reid (Tejlor Dženkins Rid)',
+        izdavac: 'ARROW',
+        popust: 15,
+        booktok: true,
+        type: 'CONTEMPORARY FICTION',
+        quantity: 1,
+        favourite: false
+    },
+    {
+        id: 8,
+        name: 'SEVEN HUSBANDS OF EVELYN HUGO TikTok Hit',
+        price: 1309,
+        realPrice: 1540,
+        img: 'https://www.knjizare-vulkan.rs/files/watermark/files/images/slike_proizvoda/thumbs_w/362824_w.jpg',
+        autor: 'Taylor Jenkins Reid (Tejlor Dženkins Rid)',
+        izdavac: 'SIMON&SHUSTER',
+        popust: 15,
+        booktok: true,
+        type: 'CONTEMPORARY FICTION',
+        quantity: 1,
+        favourite: false
+    },
+    {
+        id: 9,
+        name: 'THE HATING GAME TikTok Hit',
+        price: 989,
+        realPrice: 1099,
+        img: 'https://www.knjizare-vulkan.rs/files/images/slike_proizvoda/363874.jpg',
+        autor: 'Sally Thorne',
+        izdavac: 'LITTLE BROWN',
+        popust: 15,
+        booktok: true,
+        type: 'CONTEMPORARY FICTION',
+        quantity: 1,
+        favourite: false
+    }
+]
+export const HarryPotterItems1 = [
+    {
+        id:1,
+        name: 'Sveska B5 sa spiralom HARRY POTTER',
+        price: 442,
+        realPrice: 520,
+        img: 'https://www.knjizare-vulkan.rs/files/images/slike_proizvoda/380338.jpg',
+        autor: '',
+        izdavac: '',
+        popust: 15,
+        booktok: false,
+        type: 'sveske',
+        quantity: 1,
+        favourite: false
+    },
+    {
+        id:2,
+        name: 'HARRY POTTER premijum sveska RAVENCLAW',
+        price: 1020,
+        realPrice: 1200,
+        img: 'https://www.knjizare-vulkan.rs/files/watermark/files/images/slike_proizvoda/thumbs_w/380229_1_w.jpg',
+        autor: '',
+        izdavac: '',
+        popust: 15,
+        booktok: false,
+        type: 'NOTESI',
+        quantity: 1,
+        favourite: false
+    },
+    {
+        id:3,
+        name: 'HARRY POTTER premijum sveska GRYFFINDOR',
+        price: 1020,
+        realPrice: 1200,
+        img: 'https://www.knjizare-vulkan.rs/files/watermark/files/images/slike_proizvoda/thumbs_w/380228_1_w.jpg',
+        autor: '',
+        izdavac: '',
+        popust: 15,
+        booktok: false,
+        type: 'NOTESI',
+        quantity: 1,
+        favourite: false
+    },
+    {
+        id:4,
+        name: 'HARRY POTTER kišobran RAVENCLAW',
+        price: 1615,
+        realPrice: 1900,
+        img: 'https://www.knjizare-vulkan.rs/files/thumbs/files/images/slike_proizvoda/thumbs_600/380225_1_600_600px.jpg',
+        autor: '',
+        izdavac: '',
+        popust: 15,
+        booktok: false,
+        type: 'KIŠOBRANI',
+        quantity: 1,
+        favourite: false
+    },
+    {
+        id:5,
+        name: 'HARRY POTTER kišobran HUFFLEPUFF',
+        price: 1615,
+        realPrice: 1900,
+        img: 'https://www.knjizare-vulkan.rs/files/watermark/files/images/slike_proizvoda/thumbs_w/380224_1_w.jpg',
+        autor: '',
+        izdavac: '',
+        popust: 15,
+        booktok: false,
+        type: 'KIŠOBRANI',
+        quantity: 1,
+        favourite: false
+    },
+    {
+        id:6,
+        name: 'HARRY POTTER kišobran GRYFFINDOR',
+        price: 1615,
+        realPrice: 1900,
+        img: 'https://www.knjizare-vulkan.rs/files/thumbs/files/images/slike_proizvoda/thumbs_600/380223_1_600_600px.jpg',
+        autor: '',
+        izdavac: '',
+        popust: 15,
+        booktok: false,
+        type: 'KIŠOBRANI',
+        quantity: 1,
+        favourite: false
+    },
+    {
+        id:7,
+        name: 'HARRY POTTER kišobran SLYTHERIN',
+        price: 1615,
+        realPrice: 1900,
+        img: 'https://www.knjizare-vulkan.rs/files/thumbs/files/images/slike_proizvoda/thumbs_600/380222_1_600_600px.jpg',
+        autor: '',
+        izdavac: '',
+        popust: 15,
+        booktok: false,
+        type: 'KIŠOBRANI',
+        quantity: 1,
+        favourite: false
+    }
+]
+export const HarryPotterItems2 = [
+    {
+        id:1,
+        name: 'HARRY POTTER ranac sa kolicima i tri pregrade',
+        price: 6392,
+        realPrice: 7990,
+        img: 'https://www.knjizare-vulkan.rs/files/thumbs/files/watermark/files/images/slike_proizvoda/thumbs_w/thumbs_1200/379668_w_1200_1200px.jpg.webp',
+        autor: '',
+        izdavac: '',
+        popust: 20,
+        booktok: false,
+        type: 'RANAC ŠKOLSKI',
+        quantity: 1,
+        favourite: false
+    },
+    {
+        id:2,
+        name: 'HARRY POTTER društvena igra HOGWARTS HALLWAYS        ',
+        price: 6250,
+        realPrice: '',
+        img: 'https://www.knjizare-vulkan.rs/files/watermark/files/images/slike_proizvoda/thumbs_w/371228_1_w.jpg',
+        autor: '',
+        izdavac: '',
+        popust: '',
+        booktok: false,
+        type: 'DRUŠTVENE IGRE',
+        quantity: 1,
+        favourite: false
+    },
+    {
+        id:3,
+        name: 'HARRY POTTER RAVENCLAW HOUSE BOX SET',
+        price: 11220,
+        realPrice: 13200,
+        img: 'https://www.delfi.rs/_img/artikli/2022/04/harry_potter_ravenclaw_house_editions_paperback_box_set_vv-2.jpg',
+        autor: 'J.K. Rowling',
+        izdavac: 'BLOOMSBERY',
+        popust: 15,
+        booktok: false,
+        type: 'FANTASY',
         quantity: 1
+    },
+    {
+        id:4,
+        name: 'HARRY POTTER GRYFFINDOR HOUSE BOX SET',
+        price: 12155,
+        realPrice: 14300,
+        img: 'https://www.delfi.rs/_img/artikli/2022/04/harry_potter_gryffindor_house_editions_paperback_box_set_vv.jpg',
+        autor: 'J.K. Rowling',
+        izdavac: 'BLOOMSBERY',
+        popust: 15,
+        booktok: false,
+        type: 'FANTASY',
+        quantity: 1
+    },
+    {
+        id:5,
+        name: 'HARRY POTTER SLYTHERIN HOUSE BOX SET',
+        price: 12155,
+        realPrice: 14300,
+        img: 'https://www.delfi.rs/_img/artikli/2022/04/harry_potter_slytherin_house_editions_paperback_box_set_vv.jpg',
+        autor: 'J.K. Rowling',
+        izdavac: 'BLOOMSBERY',
+        popust: 15,
+        booktok: false,
+        type: 'FANTASY',
+        quantity: 1,
+        favourite: false
+    },
+    {
+        id:6,
+        name: 'HARRY POTTER BOXED SET adult',
+        price: 9350,
+        realPrice: 11000,
+        img: 'https://www.delfi.rs/_img/artikli/2018/11/harry_potter_boxed_set_the_complete_collection_vv.jpg',
+        autor: 'J.K. Rowling',
+        izdavac: 'BLOOMSBERY',
+        popust: 15,
+        booktok: false,
+        type: 'FANTASY',
+        quantity: 1,
+        favourite: false
+    },
+    {
+        id:7,
+        name: 'HARRY POTTER BOXED SET',
+        price: 9836,
+        realPrice: 11572,
+        img: 'https://www.knjizare-vulkan.rs/files/thumbs/files/watermark/files/images/slike_proizvoda/thumbs_w/thumbs_1200/290946_w_1200_1200px.jpg.webp',
+        autor: 'J.K. Rowling',
+        izdavac: 'BLOOMSBERY',
+        popust: 15,
+        booktok: false,
+        type: 'FANTASY',
+        quantity: 1,
+        favourite: false
+    }
+]
+export const HarryPotterItems3 = [
+    {
+        id:1,
+        name: 'HARRY POTTER novčanik RAVENCLA',
+        price: 1487,
+        realPrice: 1750,
+        img: 'https://www.knjizare-vulkan.rs/files/watermark/files/images/slike_proizvoda/thumbs_w/380214_1_w.jpg',
+        autor: '',
+        izdavac: '',
+        popust: 15,
+        booktok: false,
+        type: 'NOVČANICI',
+        quantity: 1,
+        favourite: false
+    },
+    {
+        id:2,
+        name: 'HARRY POTTER novčanik HUFFLEPUFF',
+        price: 1487,
+        realPrice: 1750,
+        img: 'https://www.knjizare-vulkan.rs/files/watermark/files/images/slike_proizvoda/thumbs_w/380213_1_w.jpg',
+        autor: '',
+        izdavac: '',
+        popust: 15,
+        booktok: false,
+        type: 'NOVČANICI',
+        quantity: 1,
+        favourite: false
+    },
+    {
+        id:3,
+        name: 'HARRY POTTER novčanik SLYTHERIN',
+        price: 1487,
+        realPrice: 1750,
+        img: 'https://www.knjizare-vulkan.rs/files/watermark/files/images/slike_proizvoda/thumbs_w/380212_1_w.jpg',
+        autor: '',
+        izdavac: '',
+        popust: 15,
+        booktok: false,
+        type: 'NOVČANICI',
+        quantity: 1,
+        favourite: false
+    },
+    {
+        id:4,
+        name: 'HARRY POTTER novčanik GRYFFINDOR',
+        price: 1487,
+        realPrice: 1750,
+        img: 'https://www.knjizare-vulkan.rs/files/watermark/files/images/slike_proizvoda/thumbs_w/380211_1_w.jpg',
+        autor: '',
+        izdavac: '',
+        popust: 15,
+        booktok: false,
+        type: 'NOVČANICI',
+        quantity: 1,
+        favourite: false
+    },
+    {
+        id:5,
+        name: 'Kutija za hranu HARRY POTTER',
+        price: 1521,
+        realPrice: 1790,
+        img: 'https://www.knjizare-vulkan.rs/files/images/slike_proizvoda/379673.jpg',
+        autor: '',
+        izdavac: '',
+        popust: 15,
+        booktok: false,
+        type: 'KUTIJE ZA HRANU',
+        quantity: 1,
+        favourite: false
+    },
+    {
+        id:6,
+        name: 'Flaša za vodu 500ml HARRY POTTER',
+        price: 1147,
+        realPrice: 1350,
+        img: 'https://www.knjizare-vulkan.rs/files/images/slike_proizvoda/379670.jpg',
+        autor: '',
+        izdavac: '',
+        popust: 15,
+        booktok: false,
+        type: 'FLAŠE I TERMOSI',
+        quantity: 1,
+        favourite: false
+    },
+    {
+        id:7,
+        name: 'HARRY POTTER školski set sa pernicom',
+        price: 1402,
+        realPrice: 1650,
+        img: 'https://www.knjizare-vulkan.rs/files/thumbs/files/watermark/files/images/slike_proizvoda/thumbs_w/thumbs_1200/379672_w_1200_1200px.jpg.webp',
+        autor: '',
+        izdavac: '',
+        popust: 15,
+        booktok: false,
+        type: 'ŠKOLSKI SETOVI',
+        quantity: 1,
+        favourite: false
     }
 ]
 export const Hoover = [
@@ -899,6 +1644,38 @@ export const Aleksandro = [
         img: 'https://i.ibb.co/0r80Qwv/alesandro-BARIKO.png'
     },
 ]
+export const NovaIzdaImg = [
+    {
+        id: 1,
+        img: 'https://i.ibb.co/fNfjNxW/NOVA.png'
+    },
+    {
+        id: 2,
+        img: 'https://i.ibb.co/hWSrP9M/Untitled-design-21.png'
+    },
+]
+export const BookTokImg = [
+    {
+        id: 1,
+        img: 'https://i.ibb.co/C9JbdK4/NOVA-1.png'
+    },
+    {
+        id: 2,
+        img: 'https://i.ibb.co/s5bFPjJ/Untitled-design-22.png'
+    },
+]
+export const HarryPotterImg = [
+    {
+        id: 1,
+        img: 'https://i.ibb.co/hypgYJT/NOVA-2.png'
+    },
+    {
+        id: 2,
+        img: 'https://i.ibb.co/JjkyNXD/Untitled-design-23.png'
+    },
+]
+
+
 export const bankImages = [
     {
         id:1,

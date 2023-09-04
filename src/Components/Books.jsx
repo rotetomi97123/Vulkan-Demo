@@ -6,7 +6,10 @@ import BrziPregled from '../Pages/BrziPregled'
 import {AiOutlineShoppingCart} from 'react-icons/ai'
 import { Link } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
-import { addItemToCart } from '../Actions'
+import { addItemToCart , addFavouriteToCart} from '../Actions'
+import {AiOutlineHeart,AiFillHeart} from 'react-icons/ai'
+
+
 
 const Books = ({ title, books }) => {
 
@@ -14,7 +17,6 @@ const Books = ({ title, books }) => {
   
     const [selectedBook, setSelectedBook] = useState(null);
     const dispatch = useDispatch();
-
   
     const openModal = (book) => {
       setSelectedBook(book);
@@ -77,9 +79,12 @@ const Books = ({ title, books }) => {
                     <HoverDiv>
                       <Link to="/Detaljnije" state={{ book: {book} }}><Btn>DETALJNIJE</Btn></Link>
                       <Btn  onClick={() => openModal(book)}>BRZI PREGLED</Btn>
-                      <Dodaj onClick={() => dispatch((addItemToCart(book)))} ><AiOutlineShoppingCart/></Dodaj>
+                      <Dodaj onClick={() => dispatch(addItemToCart(book))}><AiOutlineShoppingCart/></Dodaj>
                     </HoverDiv>
                 </Card>
+                <HeartDiv onClick={() =>(dispatch(addFavouriteToCart(book)))}>
+                      <AiOutlineHeart />
+                  </HeartDiv>
                 <NameDiv>
                     <p>{book.name}</p>
                     <h2>{book.price} RSD</h2>
@@ -103,6 +108,14 @@ const Wrapper = styled.div`
     padding: 0 1rem;
   }
   padding-bottom: 3rem;
+`
+const HeartDiv = styled.div`
+  z-index: 50;
+  cursor: pointer;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  font-size: 1.2rem;
 `
 const Dodaj = styled.button`
   color:white;

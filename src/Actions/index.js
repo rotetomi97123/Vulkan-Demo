@@ -37,3 +37,20 @@ export const handleDecrement = (item) => {
       payload: {id : item.id}
   }
 }
+export const addFavouriteToCart = (item) => {
+  return {
+    type: 'ADD_FAVOURITE_TO_CART',
+    payload: item
+  }
+}
+export const removeFavouriteFromCart = (index) => {
+  return {
+    type: 'REMOVE_FAVOURITE_FROM_CART',
+    payload: index
+  }
+}
+export const clearFavouriteCart = () => {
+  return {
+    type: 'CLEAR_FAVOURITE_CART'
+  }
+}
