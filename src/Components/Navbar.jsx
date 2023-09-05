@@ -175,6 +175,7 @@ const Navbar = () => {
                 <p>KNJIGE</p>
                 <Link to='/EnglishBooks'><p>ENGLISH BOOKS</p></Link>
                 <Link to='/Gifts'><p>GIFTS</p></Link>
+                <Link to='/Proizvodi'><p>POGLEDAJ SVE</p></Link>
             </MobileKategorija>}
         </MobileNav>}
         {favouriteShow &&<FavouriteDiv>
@@ -227,9 +228,8 @@ const ClearButton = styled.button`
     position: absolute;
     bottom: -2rem;
     right: 0.5rem;
-    width: 60px;
-    height: 25px;
     font-size: 1rem;
+    padding: 0.2rem;
     border: 1px solid black;
     background: none;
     cursor: pointer;
@@ -335,6 +335,11 @@ const MobileKategorija = styled.div`
     flex-direction: column;
     justify-content:center;
     align-items:center;
+    a{
+        text-decoration:none;
+        list-style-type:none;
+        color:black;
+    }
     p{
         font-size: 1rem;
         margin-bottom:1rem;
@@ -392,7 +397,6 @@ const MobileMenu = styled.div`
     justify-content:flex-start;
     align-items:flex-start;
     padding-top:2rem;
-    
     a{
         text-decoration:none;
         list-style-type:none;
