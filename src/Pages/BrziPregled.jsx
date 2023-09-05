@@ -29,10 +29,10 @@ const BrziPregled = ({ book, onClose }) => {
                     <h4>Šifra artikla: 335206</h4>
                     <h4>Isbn: 9781405391245</h4>
                 </MarginDiv>
-                <MarginDiv>
+                {book.autor === '' ? '':<MarginDiv>
                     <p>AUTOR: <span>{book.autor}</span></p>
                     <p>IZDAVAC: <span>{book.izdavac}</span></p>
-                </MarginDiv>
+                </MarginDiv>}
                     <Line />
                     <h3>{book.realPrice}RSD</h3>
                     <Cena>Cena na sajtu: {book.price} RSD</Cena>
@@ -185,7 +185,7 @@ const Box = styled.div`
 `   
 const ImgDiv = styled.div`
     position:relative;
-    width:50%;
+    width:60%;
     height:100%;
     display:flex;
     padding-left: 5rem;

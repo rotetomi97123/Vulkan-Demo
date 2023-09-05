@@ -1604,6 +1604,186 @@ export const HarryPotterItems3 = [
         favourite: false
     }
 ]
+export const GiftItems1 = [
+    {
+        id:1,
+        name: 'Flaša za vodu 0,5L CHECK',
+        price: 1887,
+        realPrice: 2220,
+        img: 'https://www.knjizare-vulkan.rs/files/watermark/files/images/slike_proizvoda/thumbs_w/380322_w.jpg',
+        autor: '',
+        izdavac: '',
+        popust: 15,
+        booktok: false,
+        type: 'FLAŠE I TERMOSI',
+        quantity: 1,
+        favourite: false
+    },
+    {
+        id:2,
+        name: 'Flaša za vodu 0,5L YUMMY YUMMY',
+        price: 1887,
+        realPrice: 2220,
+        img: 'https://www.knjizare-vulkan.rs/files/thumbs/files/watermark/files/images/slike_proizvoda/thumbs_w/thumbs_1200/380319_w_1200_1200px.jpg.webp',
+        autor: '',
+        izdavac: '',
+        popust: 15,
+        booktok: false,
+        type: 'FLAŠE I TERMOSI',
+        quantity: 1,
+        favourite: false
+    },
+    ,
+    {
+        id:3,
+        name: 'Staklena flaša 0,5L BEAUTIFUL LEMONS',
+        price: 1402,
+        realPrice: 1650,
+        img: 'https://www.knjizare-vulkan.rs/files/images/slike_proizvoda/380310.jpg',
+        autor: '',
+        izdavac: '',
+        popust: 15,
+        booktok: false,
+        type: 'FLAŠE I TERMOSI',
+        quantity: 1,
+        favourite: false
+    },
+    ,
+    {
+        id:4,
+        name: 'Staklena flaša 0,5L BUTTERFLY FLOWERS',
+        price: 1402,
+        realPrice: 1650,
+        img: 'https://www.knjizare-vulkan.rs/files/watermark/files/images/slike_proizvoda/thumbs_w/380311_w.jpg',
+        autor: '',
+        izdavac: '',
+        popust: 15,
+        booktok: false,
+        type: 'FLAŠE I TERMOSI',
+        quantity: 1,
+        favourite: false
+    },
+    ,
+    {
+        id:5,
+        name: 'Staklena flaša 0,5L PAT',
+        price: 1402,
+        realPrice: 1650,
+        img: 'https://www.knjizare-vulkan.rs/files/watermark/files/images/slike_proizvoda/thumbs_w/380314_w.jpg',
+        autor: '',
+        izdavac: '',
+        popust: 15,
+        booktok: false,
+        type: 'FLAŠE I TERMOSI',
+        quantity: 1,
+        favourite: false
+    },
+    ,
+    {
+        id:6,
+        name: 'Šolja u poklon kutiji 0,4L PURE MEADOW ANTHRACITE',
+        price: 1643,
+        realPrice: 1933,
+        img: 'https://www.knjizare-vulkan.rs/files/images/slike_proizvoda/380305.jpg',
+        autor: '',
+        izdavac: '',
+        popust: 15,
+        booktok: false,
+        type: 'FLAŠE I TERMOSI',
+        quantity: 1,
+        favourite: false
+    },
+]
+export const GiftItems2 = [
+    {
+        id:1,
+        name: 'Kasica SKUTER',
+        price: 2150,
+        realPrice: '',
+        img: 'https://www.knjizare-vulkan.rs/files/thumbs/files/watermark/files/images/slike_proizvoda/thumbs_w/thumbs_1200/374664_w_1200_1200px.jpg.webp',
+        autor: '',
+        izdavac: '',
+        popust: '',
+        booktok: false,
+        type: 'KASICE',
+        quantity: 1,
+        favourite: false
+    },
+    {
+        id:2,
+        name: 'Ram za slike 20X25 cm',
+        price: 580,
+        realPrice: 683,
+        img: 'https://www.knjizare-vulkan.rs/files/thumbs/files/watermark/files/images/slike_proizvoda/thumbs_w/thumbs_1200/376509_w_1200_1200px.jpg.webp',
+        autor: '',
+        izdavac: '',
+        popust: 15,
+        booktok: false,
+        type: 'RAMOVI ZA FOTOGRAFIJE',
+        quantity: 1,
+        favourite: false
+    },
+    ,
+    {
+        id:3,
+        name: 'TALL ROCK VASE',
+        price: 1527,
+        realPrice: '',
+        img: 'https://www.knjizare-vulkan.rs/files/watermark/files/images/slike_proizvoda/thumbs_w/371812_w.jpg',
+        autor: '',
+        izdavac: '',
+        popust: 15,
+        booktok: false,
+        type: 'VAZE I ZAVESE',
+        quantity: 1,
+        favourite: false
+    },
+    ,
+    {
+        id:4,
+        name: 'Noćna lampa GORILA',
+        price: 679,
+        realPrice: 799,
+        img: 'https://www.knjizare-vulkan.rs/files/watermark/files/images/slike_proizvoda/thumbs_w/372836_w.jpg',
+        autor: '',
+        izdavac: '',
+        popust: 15,
+        booktok: false,
+        type: 'LAMPE',
+        quantity: 1,
+        favourite: false
+    },
+    ,
+    {
+        id:5,
+        name: 'Noćna lampa VATROGASNA KOLA',
+        price: 1869,
+        realPrice: 2199,
+        img: 'https://www.knjizare-vulkan.rs/files/watermark/files/images/slike_proizvoda/thumbs_w/372840_w.jpg',
+        autor: '',
+        izdavac: '',
+        popust: 15,
+        booktok: false,
+        type: 'LAMPE',
+        quantity: 1,
+        favourite: false
+    },
+    ,
+    {
+        id:6,
+        name: 'Ukrasna kutijica SRCE',
+        price: 122,
+        realPrice: 144,
+        img: 'https://www.knjizare-vulkan.rs/files/thumbs/files/watermark/files/images/slike_proizvoda/thumbs_w/thumbs_1200/322512_w_1200_1200px.jpg.webp',
+        autor: '',
+        izdavac: '',
+        popust: 15,
+        booktok: false,
+        type: 'UKRASNE KUTIJICE',
+        quantity: 1,
+        favourite: false
+    },
+]
 export const Hoover = [
     {
         id:1,
@@ -1674,8 +1854,26 @@ export const HarryPotterImg = [
         img: 'https://i.ibb.co/JjkyNXD/Untitled-design-23.png'
     },
 ]
-
-
+export const EnglishBooksImg = [
+    {
+        id: 1,
+        img: 'https://i.ibb.co/hBM6699/FICTION.png'
+    },
+    {
+        id: 2,
+        img: 'https://i.ibb.co/cySN7fL/Untitled-design-24.png'
+    },
+]
+export const FlaseImg = [
+    {
+        id: 1,
+        img: 'https://i.ibb.co/KVHm2Xq/FICTION-1.png'
+    },
+    {
+        id: 2,
+        img: 'https://i.ibb.co/h8PLX4k/Untitled-design-25.png'
+    },
+]
 export const bankImages = [
     {
         id:1,

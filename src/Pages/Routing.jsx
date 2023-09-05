@@ -8,6 +8,9 @@ import AllBooks from './AllBooks'
 import NovaIzdanja from './NovaIzdanja'
 import BookTok from './BookTok'
 import HarryPotter from './HarryPotter'
+import EnglishBooks from './EnglishBooks'
+import Gift from './Gift'
+import AllProizvodi from './AllProizvodi'
 
 const Routing = () => {
   return (
@@ -20,6 +23,10 @@ const Routing = () => {
         <Route path='/NovaIzdanja' element={<NovaIzdanja />} />
         <Route path='/BookTok' element={<BookTok />} />
         <Route path='/HarryPotter' element={<HarryPotter />} />
+        <Route path='/EnglishBooks' element={<EnglishBooks />} />
+        <Route path='/Gifts' element={<Gift />} />
+        <Route path='/Proizvodi' element={<AllProizvodi />} />
+
     </Routes>
   )
 }

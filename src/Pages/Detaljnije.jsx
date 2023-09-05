@@ -7,7 +7,7 @@ import {BsFillCartFill} from 'react-icons/bs'
 import { useLocation } from 'react-router-dom';
 import {AiOutlineHeart} from 'react-icons/ai'
 import { useDispatch } from 'react-redux'
-import { addItemToCart } from '../Actions'
+import { addItemToCart,addFavouriteToCart } from '../Actions'
 
 const Detaljnije = () => {
   const location = useLocation();
@@ -63,7 +63,7 @@ const Detaljnije = () => {
                         <Dodaj onClick={() => dispatch((addItemToCart(book)))}>DODAJ U KORPU<BsFillCartFill style={{marginLeft:'0.5rem'}} size={20}/></Dodaj>
                     </Flex>
                         <DetaljnijeBtn>DETALJNIJE</DetaljnijeBtn>
-                        <Zelja>
+                        <Zelja onClick={() =>(dispatch(addFavouriteToCart(book)))}>
                             <AiOutlineHeart size={20} style={{cursor:'pointer'}}  />
                             <p>Sačuvajte u listi želja</p>
                         </Zelja>

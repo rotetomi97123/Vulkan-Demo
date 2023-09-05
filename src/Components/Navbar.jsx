@@ -136,11 +136,9 @@ const Navbar = () => {
           onMouseEnter={handleMouseEnterTooltip}
           onMouseLeave={handleMouseLeaveTooltip}>
                 <Link to='/Allbooks'><p>KNJIGA</p></Link>
-                <p>ZA DECU</p>
-                <p>ENGLISH BOOKS</p>
-                <p>GIFT</p>
-                <p>PARTY PROGRAM</p>
-                <Link to='/Allbooks'><p>POGLEDAJ SVE</p></Link>
+                <Link to='/EnglishBooks'><p>ENGLISH BOOKS</p></Link>
+                <Link to='/Gifts'><p>GIFTS</p></Link>
+                <Link to='/Proizvodi'><p>POGLEDAJ SVE</p></Link>
             </Kategorije>}
         </RealNav>
         {isWindowBelow750 &&<MobileNav>
@@ -175,10 +173,8 @@ const Navbar = () => {
             </MobileMenu>}
             {mobileKateg &&<MobileKategorija>
                 <p>KNJIGE</p>
-                <p>ZA DECU</p>
-                <p>ENGLISH BOOKS</p>
-                <p>GIFT</p>
-                <p>PARTY PROGRAM</p>
+                <Link to='/EnglishBooks'><p>ENGLISH BOOKS</p></Link>
+                <Link to='/Gifts'><p>GIFTS</p></Link>
             </MobileKategorija>}
         </MobileNav>}
         {favouriteShow &&<FavouriteDiv>
@@ -198,7 +194,7 @@ const Navbar = () => {
                         </FavouriteBox>
                     )
                 })}
-            <ClearButton onClick={() => dispatch(clearFavouriteCart())}>Clear</ClearButton>
+            <ClearButton onClick={() => dispatch(clearFavouriteCart())}>Izbrišite</ClearButton>
             </>}
             </Position>
         </FavouriteDiv>}
